@@ -1,0 +1,10 @@
+# High-resolution original scans (local only)
+originals/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
