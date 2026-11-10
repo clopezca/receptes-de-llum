@@ -8,12 +8,170 @@
       name="description"
       content="Del laboratori fotogràfic al filtre digital: un interactiu sobre remediació i transcodificació."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
+    <header class="site-header">
+      <div class="wrap hero">
+        <h1>Receptes<br />de llum</h1>
+        <p class="lede">
+          Del laboratori fotogràfic al filtre digital. Una mateixa fotografia,
+          revelada amb química i amb programari.
+        </p>
+        <dl class="reagent-label hero-label" data-process="both">
+          <div>
+            <dt>Data</dt>
+            <dd>Maig de 2009, 11–14 h</dd>
+          </div>
+          <div>
+            <dt>Exposició</dt>
+            <dd>4′ al sol directe</dd>
+          </div>
+          <div>
+            <dt>Processos</dt>
+            <dd>Cianotípia · Van Dyke</dd>
+          </div>
+        </dl>
+      </div>
+
+      <nav class="step-wedge" aria-label="Estacions">
+        <ol>
+          <li>
+            <a href="#analogica-o-digital"
+              ><span class="strip-step">0</span> Analògica o digital?</a
+            >
+          </li>
+          <li>
+            <a href="#cianotipia"
+              ><span class="strip-step">1</span> Cianotípia</a
+            >
+          </li>
+          <li>
+            <a href="#van-dyke"><span class="strip-step">2</span> Van Dyke</a>
+          </li>
+          <li>
+            <a href="#en-un-clic"
+              ><span class="strip-step">3</span> En un clic</a
+            >
+          </li>
+          <li>
+            <a href="#taller"
+              ><span class="strip-step">4</span> La teva recepta</a
+            >
+          </li>
+          <li>
+            <a href="#tancament"><span class="strip-step">5</span> Tancament</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+
     <main>
-      <h1>Receptes de llum</h1>
+      <section
+        class="station"
+        id="analogica-o-digital"
+        aria-labelledby="s0-title"
+      >
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="digital">
+            <p class="label-number">Nº 0</p>
+            <h2 id="s0-title">Analògica o digital?</h2>
+            <p class="label-formula">
+              6 mostres · 3 químiques, 3 de programari
+            </p>
+          </header>
+          <p class="station-intro">
+            Algunes d'aquestes imatges són còpies químiques. Les altres són
+            filtres. Saps distingir-les?
+          </p>
+        </div>
+      </section>
+
+      <section class="station" id="cianotipia" aria-labelledby="s1-title">
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="cyanotype">
+            <p class="label-number">Nº 1</p>
+            <h2 id="s1-title">Laboratori: cianotípia</h2>
+            <p class="label-formula">
+              Citrat fèrric amoniacal + ferricianur de potassi · 4′ · sol
+              directe
+            </p>
+          </header>
+          <p class="station-intro">
+            Sals de ferro, un negatiu i quatre minuts de sol. Tria el paper i
+            l'hora, i espera.
+          </p>
+        </div>
+      </section>
+
+      <section class="station" id="van-dyke" aria-labelledby="s2-title">
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="vandyke">
+            <p class="label-number">Nº 2</p>
+            <h2 id="s2-title">Laboratori: Van Dyke</h2>
+            <p class="label-formula">
+              Citrat fèrric amoniacal + àcid tartàric + nitrat de plata · 4′ ·
+              fixat
+            </p>
+          </header>
+          <p class="station-intro">
+            Una recepta germana amb nitrat de plata: el blau es torna marró.
+          </p>
+        </div>
+      </section>
+
+      <section class="station" id="en-un-clic" aria-labelledby="s3-title">
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="digital">
+            <p class="label-number">Nº 3</p>
+            <h2 id="s3-title">El mateix, en un clic</h2>
+            <p class="label-formula">feColorMatrix · 20 valors · 0,1 s</p>
+          </header>
+          <p class="station-intro">
+            La foto original, la còpia de 2009 i un filtre digital. Obre el
+            filtre per veure què hi ha a sota.
+          </p>
+        </div>
+      </section>
+
+      <section class="station" id="taller" aria-labelledby="s4-title">
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="digital">
+            <p class="label-number">Nº 4</p>
+            <h2 id="s4-title">Taller: la teva recepta</h2>
+            <p class="label-formula">To · contrast · gra · vinyeta</p>
+          </header>
+          <p class="station-intro">
+            Crea el teu filtre, posa-li nom i comparteix-ne la recepta.
+          </p>
+        </div>
+      </section>
+
+      <section class="station" id="tancament" aria-labelledby="s5-title">
+        <div class="wrap">
+          <header class="reagent-label station-label" data-process="both">
+            <p class="label-number">Nº 5</p>
+            <h2 id="s5-title">Tancament</h2>
+            <p class="label-formula">Torna al laboratori</p>
+          </header>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          Còpies i fotografia originals: Carolina López Casanova, 2009. Cultura
+          Digital (UOC), PAC 2, 2026.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
