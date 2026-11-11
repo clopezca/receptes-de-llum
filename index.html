@@ -138,6 +138,122 @@
             La foto original, la còpia de 2009 i un filtre digital. Obre el
             filtre per veure què hi ha a sota.
           </p>
+
+          <div class="compare" data-station="filter">
+            <fieldset class="process-picker">
+              <legend>Procés</legend>
+              <label
+                ><input type="radio" name="process" value="cyanotype" checked />
+                Cianotípia</label
+              >
+              <label
+                ><input type="radio" name="process" value="vandyke" /> Van
+                Dyke</label
+              >
+            </fieldset>
+
+            <div class="compare-grid">
+              <figure class="specimen">
+                <img
+                  src="img/original-2009.jpg"
+                  alt="Fotografia original de 2009: roba estesa amb pinces en un estenedor, al costat d'una finestra."
+                  width="1280"
+                  height="620"
+                />
+                <figcaption>
+                  <span>Original</span><span>Fotografia · 2009</span>
+                </figcaption>
+              </figure>
+
+              <figure class="specimen">
+                <img
+                  class="js-print"
+                  src="img/cyanotype-2009.jpg"
+                  alt="Cianotípia de 2009: la roba estesa en blau de Prússia sobre paper d'aquarel·la."
+                  width="1508"
+                  height="734"
+                />
+                <figcaption>
+                  <span class="js-print-name">Cianotípia</span
+                  ><span>4′ de sol · 2009</span>
+                </figcaption>
+              </figure>
+
+              <figure class="specimen specimen--filter">
+                <div class="flip js-flip">
+                  <div class="flip-face flip-front">
+                    <img
+                      class="filtered"
+                      src="img/original-2009.jpg"
+                      alt=""
+                      width="1280"
+                      height="620"
+                    />
+                  </div>
+                  <div class="flip-face flip-back" aria-live="polite">
+                    <div class="layer js-layer-culture">
+                      <ul class="culture-list js-culture"></ul>
+                    </div>
+                    <div class="layer js-layer-code" hidden>
+                      <table class="matrix js-matrix">
+                        <caption class="visually-hidden">
+                          Matriu de color del filtre
+                        </caption>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <figcaption>
+                  <span
+                    >Filtre <span class="js-filter-name">Cianotípia</span></span
+                  ><span>1 clic · 2026</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="compare-actions">
+              <button
+                type="button"
+                class="button js-flip-toggle"
+                aria-pressed="false"
+              >
+                Obre el filtre
+              </button>
+              <div
+                class="layer-switch js-layer-switch"
+                role="group"
+                aria-label="Capa"
+                hidden
+              >
+                <button
+                  type="button"
+                  class="button button--small"
+                  aria-pressed="true"
+                  data-layer="culture"
+                >
+                  Capa cultural
+                </button>
+                <button
+                  type="button"
+                  class="button button--small"
+                  aria-pressed="false"
+                  data-layer="code"
+                >
+                  Capa informàtica
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <svg class="visually-hidden" aria-hidden="true" focusable="false">
+            <filter id="process-filter" color-interpolation-filters="sRGB">
+              <feColorMatrix
+                class="js-color-matrix"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+              ></feColorMatrix>
+            </filter>
+          </svg>
         </div>
       </section>
 
@@ -169,7 +285,7 @@
       <div class="wrap">
         <p>
           Còpies i fotografia originals: Carolina López Casanova, 2009. Cultura
-          Digital (UOC), PAC 2, 2026.
+          Digital (UOC) 2026.
         </p>
       </div>
     </footer>
