@@ -61,7 +61,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 3.75rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -213,12 +212,6 @@ h1 {
   --band: linear-gradient(90deg, var(--prussian) 0 50%, var(--vandyke) 0);
 }
 
-.step-wedge {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
 .step-wedge ol {
   display: grid;
   grid-template-columns: repeat(6, minmax(max-content, 1fr));
@@ -270,10 +263,6 @@ h1 {
   font-family: var(--font-label);
   font-weight: 700;
   font-size: var(--text-sm);
-}
-
-.step-wedge a[aria-current="true"] .strip-step::after {
-  content: " ●";
 }
 
 .step-wedge a:focus-visible {
