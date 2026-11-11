@@ -74,6 +74,34 @@
     </header>
 
     <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="wrap intro-grid">
+          <div class="intro-text">
+            <h2 id="intro-title">Abans de començar</h2>
+            <p>
+              El maig de 2009 vaig fer una cianotípia i una còpia Van Dyke a
+              partir d'aquesta fotografia: química, paper i quatre minuts de
+              sol. Avui, el mateix aspecte s'aconsegueix amb un filtre. Aquest
+              interactiu compara les dues receptes.
+            </p>
+            <p>
+              Recorre les estacions en ordre o salta a la que vulguis des de la
+              tira de dalt. A cada estació hi ha alguna cosa per tocar.
+            </p>
+          </div>
+          <dl class="glossary">
+            <div>
+              <dt>Remediació</dt>
+              <dd>Text pendent</dd>
+            </div>
+            <div>
+              <dt>Transcodificació</dt>
+              <dd>Text pendent</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section
         class="station"
         id="analogica-o-digital"
@@ -87,9 +115,9 @@
               6 mostres · 3 químiques, 3 de programari
             </p>
           </header>
-          <p class="station-intro">
-            Algunes d'aquestes imatges són còpies químiques. Les altres són
-            filtres. Saps distingir-les?
+          <p class="station-hint">
+            Mira les sis mostres i decideix, una per una, si són química o
+            programari. Pista: fixa’t en el paper.
           </p>
         </div>
       </section>
@@ -104,10 +132,71 @@
               directe
             </p>
           </header>
-          <p class="station-intro">
-            Sals de ferro, un negatiu i quatre minuts de sol. Tria el paper i
-            l'hora, i espera.
+          <p class="station-hint">
+            Tria el paper, la preparació i l’hora del dia. L’exposició sempre
+            dura quatre minuts, i no es pot desfer.
           </p>
+          <aside
+            class="reagent-label process-sheet"
+            data-process="cyanotype"
+            aria-label="Fitxa de la cianotípia"
+          >
+            <dl>
+              <div>
+                <dt>Què és</dt>
+                <dd>
+                  Un procés fotogràfic per contacte: un negatiu sobre paper
+                  sensibilitzat amb sals de ferro, exposat a la llum
+                  ultraviolada. La imatge surt blava.
+                </dd>
+              </div>
+              <div>
+                <dt>Recepta</dt>
+                <dd>
+                  Citrat fèrric amoniacal i ferricianur de potassi, en dues
+                  solucions que es barregen abans de fer-les servir.
+                </dd>
+              </div>
+              <div>
+                <dt>Passos</dt>
+                <dd>
+                  <ol>
+                    <li>
+                      Sensibilitzar el paper i deixar-lo assecar a les fosques.
+                    </li>
+                    <li>Posar-hi el negatiu a sobre.</li>
+                    <li>Exposar-lo al sol.</li>
+                    <li>Rentar-lo amb aigua: és l'únic fixat que necessita.</li>
+                  </ol>
+                </dd>
+              </div>
+              <div>
+                <dt>Química</dt>
+                <dd>
+                  La llum redueix el ferro i es forma blau de Prússia. El rentat
+                  elimina les sals que no s’han exposat.
+                </dd>
+              </div>
+              <div>
+                <dt>Història</dt>
+                <dd>
+                  John Herschel la va documentar el 1842. El 1843, Anna Atkins
+                  va publicar <cite>Photographs of British Algae</cite>, el
+                  primer llibre il·lustrat amb fotografies. Des de 1872 es va
+                  comercialitzar per copiar plànols: d'aquí ve el
+                  <i lang="en">blueprint</i>.
+                </dd>
+              </div>
+              <div>
+                <dt>Les meves còpies</dt>
+                <dd>
+                  Paper Guarro d'aquarel·la de 240 g, 4′ al sol directe, maig de
+                  2009. Vam provar tres preparacions del paper: cola de conill,
+                  gelatina i sense tractar.
+                </dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
@@ -121,9 +210,73 @@
               fixat
             </p>
           </header>
-          <p class="station-intro">
-            Una recepta germana amb nitrat de plata: el blau es torna marró.
+          <p class="station-hint">
+            Com la cianotípia, però amb ferro i plata: la imatge surt marró. Al
+            final, cal fixar la còpia.
           </p>
+          <aside
+            class="reagent-label process-sheet"
+            data-process="vandyke"
+            aria-label="Fitxa del Van Dyke"
+          >
+            <dl>
+              <div>
+                <dt>Què és</dt>
+                <dd>
+                  Un procés germà de la cianotípia, de la família del ferro i la
+                  plata. La imatge surt marró.
+                </dd>
+              </div>
+              <div>
+                <dt>Recepta</dt>
+                <dd>
+                  Citrat fèrric amoniacal, àcid tartàric i nitrat de plata, en
+                  una sola solució.
+                </dd>
+              </div>
+              <div>
+                <dt>Passos</dt>
+                <dd>
+                  <ol>
+                    <li>
+                      Sensibilitzar el paper i deixar-lo assecar a les fosques.
+                    </li>
+                    <li>Posar-hi el negatiu a sobre.</li>
+                    <li>Exposar-lo al sol.</li>
+                    <li>Rentar-lo amb aigua.</li>
+                    <li>Fixar-lo amb tiosulfat de sodi diluït.</li>
+                    <li>Rentar-lo de nou.</li>
+                  </ol>
+                </dd>
+              </div>
+              <div>
+                <dt>Química</dt>
+                <dd>
+                  La llum redueix el ferro, i el ferro reduït converteix la
+                  plata en plata metàl·lica, que dona el marró. El fixat elimina
+                  la plata no exposada; sense fixar, la còpia no és estable.
+                </dd>
+              </div>
+              <div>
+                <dt>Història</dt>
+                <dd>
+                  Pertany a la família de processos de ferro i plata que va
+                  iniciar John Herschel el 1842. El 1895, l’empresa alemanya
+                  Arndt und Troost en va patentar una fórmula. El nom remet al
+                  pintor Anthony van Dyck: els marrons de la còpia recorden els
+                  de les seves pintures.
+                </dd>
+              </div>
+              <div>
+                <dt>Les meves còpies</dt>
+                <dd>
+                  Paper Bàsic de 350 g, 4′ al sol directe, maig de 2009. El sol
+                  de migdia en va sobreexposar algunes, i les vam salvar en part
+                  amb una capa de goma aràbiga.
+                </dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
@@ -134,9 +287,9 @@
             <h2 id="s3-title">El mateix, en un clic</h2>
             <p class="label-formula">feColorMatrix · 20 valors · 0,1 s</p>
           </header>
-          <p class="station-intro">
-            La foto original, la còpia de 2009 i un filtre digital. Obre el
-            filtre per veure què hi ha a sota.
+          <p class="station-hint">
+            Compara la còpia de 2009 amb el filtre: fixa’t en les ombres i en la
+            vora del paper. Després, obre el filtre per veure què hi ha a sota.
           </p>
 
           <div class="compare" data-station="filter">
@@ -264,8 +417,9 @@
             <h2 id="s4-title">Taller: la teva recepta</h2>
             <p class="label-formula">To · contrast · gra · vinyeta</p>
           </header>
-          <p class="station-intro">
-            Crea el teu filtre, posa-li nom i comparteix-ne la recepta.
+          <p class="station-hint">
+            Mou els controls, posa nom al teu filtre i copia’n l’enllaç. Si
+            vols, prova-ho amb una foto teva: no surt del teu navegador.
           </p>
         </div>
       </section>
@@ -282,11 +436,37 @@
     </main>
 
     <footer class="site-footer">
-      <div class="wrap">
-        <p>
-          Còpies i fotografia originals: Carolina López Casanova, 2009. Cultura
-          Digital (UOC) 2026.
-        </p>
+      <div class="wrap footer-grid">
+        <h2 class="footer-title">Sobre aquest projecte</h2>
+        <dl class="footer-facts">
+          <div>
+            <dt>Autora</dt>
+            <dd>Carolina López Casanova</dd>
+          </div>
+          <div>
+            <dt>Context</dt>
+            <dd>Cultura Digital (UOC) 2026</dd>
+          </div>
+          <div>
+            <dt>Imatges</dt>
+            <dd>Fotografia, cianotípia i Van Dyke pròpies, maig de 2009</dd>
+          </div>
+          <div>
+            <dt>Fet amb</dt>
+            <dd>
+              HTML, CSS i JavaScript, sense dependències. Filtres SVG
+              <code>feColorMatrix</code>
+            </dd>
+          </div>
+          <div>
+            <dt>Codi</dt>
+            <dd>
+              <a href="https://github.com/clopezca/receptes-de-llum"
+                >github.com/clopezca/receptes-de-llum</a
+              >
+            </dd>
+          </div>
+        </dl>
       </div>
     </footer>
   </body>

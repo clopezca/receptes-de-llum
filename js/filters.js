@@ -62,7 +62,7 @@ export const PROCESSES = {
       "Còpia Van Dyke de 2009: la mateixa imatge en marró, amb les ombres molt denses.",
     culture: [
       "Marró Van Dyke",
-      "Pren el nom d'un pigment de pintor, pel retratista Anthony van Dyck",
+      "El nom remet al pintor Anthony Van Dyck i als marrons de les seves obres",
       "Ferro i plata: cal fixar la còpia",
       "Antic · càlid · d'àlbum familiar",
     ],

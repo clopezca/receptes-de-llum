@@ -280,15 +280,129 @@ h1 {
   gap: 1.75rem;
 }
 
-.station-intro {
+.station-hint {
   max-width: var(--measure);
   color: var(--ink-soft);
 }
 
+.process-sheet {
+  max-width: 48rem;
+}
+
+.process-sheet dl {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.process-sheet dl > div {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.process-sheet dt {
+  font-weight: 700;
+}
+
+.process-sheet dd {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.process-sheet ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 34rem) {
+  .process-sheet dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+.intro {
+  padding-block: 4rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.intro-text {
+  display: grid;
+  gap: 1rem;
+  max-width: var(--measure);
+}
+
+.intro-text h2 {
+  font-size: var(--text-xl);
+}
+
+.glossary {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.glossary div {
+  display: grid;
+  gap: 0.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.glossary dt {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.glossary dd {
+  color: var(--ink-soft);
+}
+
 .site-footer {
-  padding-block: 2.5rem;
+  padding-block: 3rem;
   font-size: var(--text-sm);
   color: var(--ink-soft);
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.footer-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: 1rem 2rem;
+}
+
+.footer-facts dt {
+  font-family: var(--font-label);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.footer-facts a {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.footer-facts code {
+  font-family: var(--font-label);
 }
 
 .visually-hidden {
