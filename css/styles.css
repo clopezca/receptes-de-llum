@@ -37,6 +37,9 @@
   --wrap: 70rem;
   --gutter: max(16px, 4vw);
 
+  --good: #2f6b3a;
+  --bad: #9b2c22;
+
   color-scheme: light;
 }
 
@@ -48,6 +51,8 @@
     --ink-soft: #a2a2a0;
     --rule: #d8d8d5;
     --hairline: #2d2e30;
+    --good: #7fbf8a;
+    --bad: #e08a80;
     --panel: #1a1b1d;
     color-scheme: dark;
   }
@@ -622,6 +627,92 @@ h1 {
 
 .layer-switch .button {
   white-space: nowrap;
+}
+
+.quiz {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: 1.75rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz-tile {
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  min-width: 0;
+}
+
+.quiz-figure {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.quiz-frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.quiz-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, center);
+  transform: scale(var(--zoom, 1.08));
+  transform-origin: var(--focus, center);
+}
+
+.quiz-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quiz-options .button {
+  flex: 1;
+}
+
+.quiz-options .button:disabled {
+  cursor: default;
+}
+
+.quiz-options .button:disabled:not([aria-pressed="true"]) {
+  opacity: 0.45;
+}
+
+.quiz-verdict {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.quiz-verdict:empty,
+.quiz-why:empty {
+  display: none;
+}
+
+.is-correct .quiz-verdict {
+  color: var(--good);
+}
+
+.is-wrong .quiz-verdict {
+  color: var(--bad);
+}
+
+.quiz-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  font-family: var(--font-label);
 }
 
 .workshop {
