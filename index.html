@@ -415,12 +415,254 @@
           <header class="reagent-label station-label" data-process="digital">
             <p class="label-number">Nº 4</p>
             <h2 id="s4-title">Taller: la teva recepta</h2>
-            <p class="label-formula">To · contrast · gra · vinyeta</p>
+            <p class="label-formula">
+              Ombres · paper · contrast · gra · vinyeta
+            </p>
           </header>
           <p class="station-hint">
             Mou els controls, posa nom al teu filtre i copia’n l’enllaç. Si
             vols, prova-ho amb una foto teva: no surt del teu navegador.
           </p>
+
+          <div class="workshop" data-station="workshop">
+            <div class="workshop-preview">
+              <figure class="specimen">
+                <div class="preview-frame">
+                  <img
+                    class="js-workshop-image workshop-filtered"
+                    src="img/original-2009.jpg"
+                    alt="La imatge de mostra amb el teu filtre aplicat."
+                    width="1280"
+                    height="620"
+                  />
+                  <svg
+                    class="grain js-grain"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <filter id="grain-noise">
+                      <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.85"
+                        numOctaves="2"
+                        stitchTiles="stitch"
+                      ></feTurbulence>
+                      <feColorMatrix type="saturate" values="0"></feColorMatrix>
+                      <feComponentTransfer>
+                        <feFuncR
+                          type="linear"
+                          slope="3"
+                          intercept="-1"
+                        ></feFuncR>
+                        <feFuncG
+                          type="linear"
+                          slope="3"
+                          intercept="-1"
+                        ></feFuncG>
+                        <feFuncB
+                          type="linear"
+                          slope="3"
+                          intercept="-1"
+                        ></feFuncB>
+                      </feComponentTransfer>
+                    </filter>
+                    <rect
+                      width="100%"
+                      height="100%"
+                      filter="url(#grain-noise)"
+                    ></rect>
+                  </svg>
+                  <div class="vignette js-vignette" aria-hidden="true"></div>
+                </div>
+                <figcaption>
+                  <span class="js-recipe-title">Recepta sense nom</span
+                  ><span class="js-image-source">Imatge de mostra · 2009</span>
+                </figcaption>
+              </figure>
+
+              <div class="photo-picker">
+                <label
+                  class="button button--small file-button"
+                  for="workshop-photo"
+                  >Prova-ho amb una foto teva</label
+                >
+                <input
+                  class="visually-hidden js-photo-input"
+                  type="file"
+                  id="workshop-photo"
+                  accept="image/*"
+                />
+                <button
+                  type="button"
+                  class="button button--small js-photo-reset"
+                  hidden
+                >
+                  Torna a la imatge de mostra
+                </button>
+                <p class="note js-photo-note">
+                  La teva foto no surt del navegador.
+                </p>
+              </div>
+
+              <aside
+                class="reagent-label reagent-label--small recipe-label"
+                data-process="digital"
+                aria-labelledby="recipe-label-title"
+              >
+                <p class="label-number">La teva recepta</p>
+                <h3 id="recipe-label-title" class="js-label-name">
+                  Recepta sense nom
+                </h3>
+                <dl class="recipe-values js-recipe-values"></dl>
+                <details class="matrix-details">
+                  <summary>Veure la matriu</summary>
+                  <table class="matrix js-workshop-matrix">
+                    <caption class="visually-hidden">
+                      Matriu de color del teu filtre
+                    </caption>
+                  </table>
+                </details>
+                <div class="share">
+                  <label class="visually-hidden" for="recipe-link"
+                    >Enllaç a la recepta</label
+                  >
+                  <input
+                    type="text"
+                    id="recipe-link"
+                    class="js-recipe-link"
+                    readonly
+                  />
+                  <button type="button" class="button js-copy-link">
+                    Copia l'enllaç
+                  </button>
+                  <p class="note js-copy-status" role="status"></p>
+                  <p class="note">
+                    L'enllaç comparteix la recepta, no la foto.
+                  </p>
+                </div>
+              </aside>
+            </div>
+
+            <form class="workshop-controls js-workshop-form" novalidate>
+              <fieldset class="start-from">
+                <legend>Comença des de</legend>
+                <button
+                  type="button"
+                  class="button button--small"
+                  data-preset="cyanotype"
+                >
+                  Cianotípia
+                </button>
+                <button
+                  type="button"
+                  class="button button--small"
+                  data-preset="vandyke"
+                >
+                  Van Dyke
+                </button>
+                <button
+                  type="button"
+                  class="button button--small"
+                  data-preset="neutral"
+                >
+                  Blanc i negre
+                </button>
+              </fieldset>
+
+              <div class="field">
+                <label for="recipe-name">Nom del filtre</label>
+                <input
+                  type="text"
+                  id="recipe-name"
+                  name="name"
+                  maxlength="40"
+                  placeholder="Recepta sense nom"
+                  autocomplete="off"
+                  aria-describedby="recipe-name-hint"
+                />
+                <p class="note" id="recipe-name-hint">
+                  Per exemple, «Sol de migdia».
+                </p>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="recipe-shadows">Color de les ombres</label>
+                  <input
+                    type="color"
+                    id="recipe-shadows"
+                    name="shadows"
+                    value="#094a72"
+                  />
+                </div>
+                <div class="field">
+                  <label for="recipe-paper">Color del paper</label>
+                  <input
+                    type="color"
+                    id="recipe-paper"
+                    name="paper"
+                    value="#f4f6f2"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="recipe-contrast"
+                  >Contrast
+                  <output class="js-out" for="recipe-contrast"></output
+                ></label>
+                <input
+                  type="range"
+                  id="recipe-contrast"
+                  name="contrast"
+                  min="0.5"
+                  max="2"
+                  step="0.05"
+                  value="1"
+                />
+              </div>
+
+              <div class="field">
+                <label for="recipe-grain"
+                  >Gra <output class="js-out" for="recipe-grain"></output
+                ></label>
+                <input
+                  type="range"
+                  id="recipe-grain"
+                  name="grain"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="0"
+                />
+              </div>
+
+              <div class="field">
+                <label for="recipe-vignette"
+                  >Vinyeta <output class="js-out" for="recipe-vignette"></output
+                ></label>
+                <input
+                  type="range"
+                  id="recipe-vignette"
+                  name="vignette"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="0"
+                />
+              </div>
+            </form>
+          </div>
+
+          <svg class="visually-hidden" aria-hidden="true" focusable="false">
+            <filter id="workshop-filter" color-interpolation-filters="sRGB">
+              <feColorMatrix
+                class="js-workshop-color-matrix"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+              ></feColorMatrix>
+            </filter>
+          </svg>
         </div>
       </section>
 

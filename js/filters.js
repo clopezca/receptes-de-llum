@@ -13,17 +13,21 @@ export function hexToRgb(hex) {
 
 /**
  * Builds a 4×5 color matrix that maps each pixel's luminance onto a
- * gradient between `dark` and `light`:  out = dark + (light − dark) · L
- * @param {string} dark  shadow color (#rrggbb)
- * @param {string} light highlight color (#rrggbb)
+ * gradient between `dark` and `light`, with optional contrast around mid-gray:
+ *   out = dark + (light − dark) · (0.5 + contrast · (L − 0.5))
+ * Contrast stays inside the matrix, so the 20 numbers are the whole filter.
+ * @param {string} dark      shadow color (#rrggbb)
+ * @param {string} light     highlight color (#rrggbb)
+ * @param {number} [contrast=1] 1 leaves the tones as they are
  * @returns {number[][]} rows R', G', B', A' — columns R, G, B, A, offset
  */
-export function duotoneMatrix(dark, light) {
+export function duotoneMatrix(dark, light, contrast = 1) {
   const d = hexToRgb(dark);
   const l = hexToRgb(light);
   const rows = d.map((dc, c) => {
     const range = l[c] - dc;
-    return [...LUMA.map((w) => range * w), 0, dc];
+    const offset = dc + range * 0.5 * (1 - contrast);
+    return [...LUMA.map((w) => range * contrast * w), 0, offset];
   });
   rows.push([0, 0, 0, 1, 0]);
   return rows;
