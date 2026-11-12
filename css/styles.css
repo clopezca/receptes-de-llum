@@ -957,6 +957,43 @@ h1 {
   margin-top: 0.4rem;
 }
 
+.closing {
+  display: grid;
+  gap: 2rem;
+  justify-items: start;
+}
+
+.closing-text {
+  display: grid;
+  gap: 1rem;
+  max-width: var(--measure);
+}
+
+.closing-quote {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 44rem;
+  margin: 0;
+  padding-block: 1.25rem;
+  border-block: 1px solid var(--rule);
+}
+
+.closing-quote blockquote {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: 1.4;
+}
+
+.closing-quote figcaption {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.closing-action {
+  text-decoration: none;
+}
+
 .workshop {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
