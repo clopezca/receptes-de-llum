@@ -152,6 +152,7 @@
             Tria el paper, la preparació i l’hora del dia. L’exposició sempre
             dura quatre minuts, i no es pot desfer.
           </p>
+
           <aside
             class="reagent-label process-sheet"
             data-process="cyanotype"
@@ -213,6 +214,137 @@
               </div>
             </dl>
           </aside>
+
+          <div class="darkroom" data-station="darkroom">
+            <form class="darkroom-form js-darkroom-form" novalidate>
+              <div class="field">
+                <label for="darkroom-paper">Paper</label>
+                <select id="darkroom-paper" name="paper">
+                  <option value="arches">
+                    Nº 25 · Arches aquarel·la gra fi, 640 g
+                  </option>
+                  <option value="guarroCoarse" selected>
+                    Nº 55 · Guarro aquarel·la gra gruixut, 240 g
+                  </option>
+                  <option value="hahnemuhle">
+                    Nº 13 · Hahnemühle Cézanne mat, 300 g
+                  </option>
+                  <option value="guarroFine">
+                    Nº 53 · Guarro aquarel·la gra fi, 240 g
+                  </option>
+                </select>
+              </div>
+              <fieldset class="choice">
+                <legend>Preparació del paper</legend>
+                <label
+                  ><input type="radio" name="preparation" value="rabbitGlue" />
+                  Cola de conill</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="preparation"
+                    value="gelatin"
+                    checked
+                  />
+                  Gelatina</label
+                >
+                <label
+                  ><input type="radio" name="preparation" value="none" /> Sense
+                  tractar</label
+                >
+              </fieldset>
+              <fieldset class="choice">
+                <legend>Hora del dia</legend>
+                <label
+                  ><input type="radio" name="hour" value="11" checked /> 11
+                  h</label
+                >
+                <label
+                  ><input type="radio" name="hour" value="12" /> 12 h</label
+                >
+                <label
+                  ><input type="radio" name="hour" value="13" /> 13 h</label
+                >
+              </fieldset>
+            </form>
+
+            <div class="bench">
+              <div class="sheet js-sheet" data-state="blank" aria-hidden="true">
+                <img
+                  class="sheet-negative"
+                  src="img/original-2009.jpg"
+                  alt=""
+                  width="1280"
+                  height="620"
+                />
+                <span class="sheet-sun"></span>
+              </div>
+              <p class="note">
+                El negatiu s'ha fet amb programari, com es fa avui: el de 2009
+                s'ha perdut.
+              </p>
+
+              <ol class="steps">
+                <li>
+                  <button
+                    type="button"
+                    class="button button--small"
+                    data-step="sensitize"
+                  >
+                    Sensibilitza el paper
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="button button--small"
+                    data-step="negative"
+                  >
+                    Col·loca el negatiu
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="button button--small"
+                    data-step="expose"
+                  >
+                    Exposa al sol
+                  </button>
+                  <output class="timer js-timer" aria-live="off">4:00</output>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="button button--small"
+                    data-step="wash"
+                  >
+                    Renta amb aigua
+                  </button>
+                </li>
+              </ol>
+              <p class="note">
+                Al laboratori, quatre minuts. Aquí, quatre segons.
+              </p>
+
+              <div class="bench-footer">
+                <p>Fulls gastats: <strong class="js-sheets-used">0</strong></p>
+                <button
+                  type="button"
+                  class="button button--small js-new-print"
+                  hidden
+                >
+                  Fes una altra còpia
+                </button>
+              </div>
+            </div>
+
+            <div class="prints">
+              <h3 class="prints-title">Les teves còpies</h3>
+              <ul class="print-list js-print-list" aria-live="polite"></ul>
+            </div>
+          </div>
         </div>
       </section>
 
