@@ -1,6 +1,11 @@
 import { PROCESSES, duotoneMatrix, matrixToValues } from "./filters.js";
 import { renderMatrix } from "./matrix-table.js";
 import { DEFAULT_RECIPE, recipeFromParams, recipeToParams } from "./recipe.js";
+import {
+  renderFilteredImage,
+  fileNameFor,
+  downloadBlob,
+} from "./export-image.js";
 
 const SAMPLE_IMAGE = "img/original-2009-crop.jpg";
 const UNTITLED = "Recepta sense nom";
@@ -39,6 +44,8 @@ export function initWorkshopStation() {
   const photoInput = root.querySelector(".js-photo-input");
   const photoReset = root.querySelector(".js-photo-reset");
   const photoNote = root.querySelector(".js-photo-note");
+  const downloadButton = root.querySelector(".js-download");
+  const downloadStatus = root.querySelector(".js-download-status");
 
   let photoUrl = null;
 
@@ -137,6 +144,23 @@ export function initWorkshopStation() {
       linkField.select();
       copyStatus.textContent =
         "No s'ha pogut copiar automàticament. L'enllaç està seleccionat: copia'l amb Ctrl+C o Cmd+C.";
+    }
+  });
+
+  downloadButton.addEventListener("click", async () => {
+    const recipe = readForm();
+    const matrix = duotoneMatrix(recipe.shadows, recipe.paper, recipe.contrast);
+    downloadButton.disabled = true;
+    downloadStatus.textContent = "Preparant la imatge…";
+    try {
+      const blob = await renderFilteredImage(image, matrix, recipe);
+      downloadBlob(blob, fileNameFor(recipe.name));
+      downloadStatus.textContent = "";
+    } catch {
+      downloadStatus.textContent =
+        "No s'ha pogut generar la imatge. Torna-ho a provar.";
+    } finally {
+      downloadButton.disabled = false;
     }
   });
 
