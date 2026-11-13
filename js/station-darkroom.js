@@ -1,39 +1,11 @@
 import { PROCESSES, duotoneMatrix } from "./filters.js";
 import { renderFilteredImage } from "./export-image.js";
 
-const ORIGINAL = "img/original-2009-crop.jpg";
+const ORIGINAL = "img/original-2009.jpg";
 const EXPOSURE_MINUTES = 4;
 const SECONDS_PER_MINUTE = 1;
 
 const HOURS = { 11: 1, 12: 1.25, 13: 1.5 };
-
-export const PAPERS = {
-  arches: {
-    name: "Arches aquarel·la gra fi, 640 g",
-    ref: "Nº 25",
-    speed: 1,
-    group2009: "Grup dels bons",
-  },
-  guarroCoarse: {
-    name: "Guarro aquarel·la gra gruixut, 240 g",
-    ref: "Nº 55",
-    speed: 1.05,
-    group2009: "Mitjans: bons",
-  },
-  hahnemuhle: {
-    name: "Hahnemühle Cézanne mat, 300 g",
-    ref: "Nº 13",
-    speed: 0.7,
-    group2009: "Mitjans: li falta exposició",
-  },
-  guarroFine: {
-    name: "Guarro aquarel·la gra fi, 240 g",
-    ref: "Nº 53",
-    speed: 0.55,
-    stains: true,
-    group2009: "Molt dolents: subexposat i amb taques",
-  },
-};
 
 const PREPARATIONS = {
   rabbitGlue: "cola de conill",
@@ -43,88 +15,201 @@ const PREPARATIONS = {
 
 const GOOD = { min: 0.85, max: 1.3 };
 
-const STEPS = ["sensitize", "negative", "expose", "wash"];
+const STEP_LABELS = {
+  sensitize: "Sensibilitza el paper",
+  negative: "Col·loca el negatiu",
+  expose: "Exposa al sol",
+  wash: "Renta amb aigua",
+  fix: "Fixa i torna a rentar",
+};
 
-export function initDarkroomStation() {
-  const root = document.querySelector('[data-station="darkroom"]');
-  if (!root) return;
+const DARKROOMS = {
+  cyanotype: {
+    process: PROCESSES.cyanotype,
+    steps: ["sensitize", "negative", "expose", "wash"],
+    defaultPaper: "guarroCoarse",
+    papers: {
+      arches: {
+        ref: "Nº 25",
+        name: "Arches aquarel·la gra fi, 640 g",
+        speed: 1,
+        group2009: "grup dels bons",
+      },
+      guarroCoarse: {
+        ref: "Nº 55",
+        name: "Guarro aquarel·la gra gruixut, 240 g",
+        speed: 1.05,
+        group2009: "mitjà, va sortir bé",
+      },
+      hahnemuhle: {
+        ref: "Nº 13",
+        name: "Hahnemühle Cézanne mat, 300 g",
+        speed: 0.7,
+        group2009: "mitjà, li va faltar exposició",
+      },
+      guarroFine: {
+        ref: "Nº 53",
+        name: "Guarro aquarel·la gra fi, 240 g",
+        speed: 0.55,
+        stains: true,
+        group2009: "molt dolent, subexposat i amb taques",
+      },
+    },
+  },
+  vandyke: {
+    process: PROCESSES.vandyke,
+    steps: ["sensitize", "negative", "expose", "wash", "fix"],
+    defaultPaper: "arches",
+    papers: {
+      arches: {
+        ref: "Nº 25",
+        name: "Arches aquarel·la gra fi, 640 g",
+        speed: 1,
+        group2009: "grup dels bons",
+      },
+      hahnemuhle: {
+        ref: "Nº 8",
+        name: "Hahnemühle Cézanne rugós, 300 g",
+        speed: 1.35,
+        group2009: "mitjà, es va sobreexposar i va millorar amb goma aràbiga",
+      },
+      fabriano: {
+        ref: "Nº 1",
+        name: "Fabriano CP 100 % cotó, 640 g",
+        speed: 1.3,
+        group2009: "mitjà, li sobrava exposició",
+      },
+      guarroFine: {
+        ref: "Nº 53",
+        name: "Guarro aquarel·la gra fi, 240 g",
+        speed: 0.7,
+        group2009: "mitjà, li va faltar exposició",
+      },
+      guarroCoarse: {
+        ref: "Nº 55",
+        name: "Guarro aquarel·la gra gruixut, 240 g",
+        speed: 1,
+        stains: true,
+        poor: true,
+        group2009: "dolent",
+      },
+    },
+  },
+};
 
+const VERDICTS = {
+  good: "Bona còpia.",
+  under: "Subexposada: massa pàl·lida.",
+  over: "Sobreexposada: les ombres es tanquen.",
+  poor: "Dolenta: la imatge no es defineix.",
+};
+
+export function initDarkroomStations() {
+  const original = new Image();
+  original.src = ORIGINAL;
+  for (const root of document.querySelectorAll('[data-station="darkroom"]')) {
+    const config = DARKROOMS[root.dataset.process];
+    if (config) initDarkroom(root, config, original);
+  }
+}
+
+function initDarkroom(root, config, original) {
   const form = root.querySelector(".js-darkroom-form");
-  const stepButtons = Object.fromEntries(
-    STEPS.map((step) => [step, root.querySelector(`[data-step="${step}"]`)]),
-  );
-  const timer = root.querySelector(".js-timer");
+  const paperSelect = form.elements.paper;
+  const stepList = root.querySelector(".js-steps");
   const sheet = root.querySelector(".js-sheet");
+  const sheetPrint = root.querySelector(".js-sheet-print");
   const printList = root.querySelector(".js-print-list");
   const sheetsUsed = root.querySelector(".js-sheets-used");
   const newPrint = root.querySelector(".js-new-print");
 
-  const original = new Image();
-  original.src = ORIGINAL;
+  paperSelect.replaceChildren(
+    ...Object.entries(config.papers).map(([id, paper]) => {
+      const option = new Option(`${paper.ref} · ${paper.name}`, id);
+      option.selected = id === config.defaultPaper;
+      return option;
+    }),
+  );
+  const stepButtons = renderSteps(stepList, config.steps);
+  const timer = stepList.querySelector(".js-timer");
 
   let used = 0;
   let current = null;
 
   const setStep = (active) => {
-    STEPS.forEach((step) => {
+    const activeIndex = config.steps.indexOf(active);
+    config.steps.forEach((step, index) => {
       stepButtons[step].disabled = step !== active;
       stepButtons[step]
         .closest("li")
-        .classList.toggle(
-          "is-done",
-          STEPS.indexOf(step) < STEPS.indexOf(active),
-        );
+        .classList.toggle("is-done", activeIndex === -1 || index < activeIndex);
     });
     for (const field of form.elements) field.disabled = active !== "sensitize";
   };
 
-  const finishAll = () => {
-    STEPS.forEach((step) => {
-      stepButtons[step].disabled = true;
-      stepButtons[step].closest("li").classList.add("is-done");
-    });
-    for (const field of form.elements) field.disabled = true;
+  const next = (step) => config.steps[config.steps.indexOf(step) + 1];
+
+  const finish = async () => {
+    setStep(null);
+    sheet.dataset.state = "done";
+    const result = develop(current, config);
+    const printNumber = used;
+    const showOnBench = (src, alt) => {
+      if (printNumber !== used || sheet.dataset.state !== "done") return;
+      sheetPrint.src = src;
+      sheetPrint.alt = alt;
+      sheetPrint.hidden = false;
+    };
+    printList.prepend(
+      await createPrint(original, current, result, config, showOnBench),
+    );
     newPrint.hidden = false;
   };
 
-  stepButtons.sensitize.addEventListener("click", () => {
-    current = {
-      paper: form.elements.paper.value,
-      preparation: form.elements.preparation.value,
-      hour: Number(form.elements.hour.value),
-    };
-    used += 1;
-    sheetsUsed.textContent = String(used);
-    sheet.dataset.state = "sensitized";
-    setStep("negative");
-  });
+  const actions = {
+    sensitize: () => {
+      current = {
+        paper: form.elements.paper.value,
+        preparation: form.elements.preparation.value,
+        hour: Number(form.elements.hour.value),
+      };
+      used += 1;
+      sheetsUsed.textContent = String(used);
+      sheet.dataset.state = "sensitized";
+    },
+    negative: () => {
+      sheet.dataset.state = "negative";
+    },
+    expose: async () => {
+      sheet.dataset.state = "exposing";
+      await countdown(timer, EXPOSURE_MINUTES, SECONDS_PER_MINUTE);
+      sheet.dataset.state = "exposed";
+    },
+    wash: () => {
+      sheet.dataset.state = "washed";
+    },
+    fix: () => {
+      sheet.dataset.state = "fixed";
+    },
+  };
 
-  stepButtons.negative.addEventListener("click", () => {
-    sheet.dataset.state = "negative";
-    setStep("expose");
-  });
-
-  stepButtons.expose.addEventListener("click", async () => {
-    stepButtons.expose.disabled = true;
-    sheet.dataset.state = "exposing";
-    await countdown(timer, EXPOSURE_MINUTES, SECONDS_PER_MINUTE);
-    sheet.dataset.state = "exposed";
-    setStep("wash");
-  });
-
-  stepButtons.wash.addEventListener("click", async () => {
-    stepButtons.wash.disabled = true;
-    sheet.dataset.state = "washed";
-    const result = develop(current);
-    const print = await createPrint(original, current, result);
-    printList.prepend(print);
-    finishAll();
+  stepList.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-step]");
+    if (!button) return;
+    const step = button.dataset.step;
+    button.disabled = true;
+    await actions[step]();
+    const following = next(step);
+    if (following) setStep(following);
+    else await finish();
   });
 
   newPrint.addEventListener("click", () => {
     current = null;
     newPrint.hidden = true;
     sheet.dataset.state = "blank";
+    sheetPrint.hidden = true;
+    sheetPrint.removeAttribute("src");
     timer.textContent = formatTime(EXPOSURE_MINUTES * 60);
     setStep("sensitize");
     stepButtons.sensitize.focus();
@@ -134,21 +219,48 @@ export function initDarkroomStation() {
   setStep("sensitize");
 }
 
-function develop({ paper, hour }) {
-  const exposure = HOURS[hour] * PAPERS[paper].speed;
+function renderSteps(list, steps) {
+  const buttons = {};
+  list.replaceChildren(
+    ...steps.map((step) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "button button--small";
+      button.dataset.step = step;
+      const label = document.createElement("span");
+      label.textContent = STEP_LABELS[step];
+      button.append(label);
+      if (step === "expose") {
+        const timer = document.createElement("output");
+        timer.className = "timer js-timer";
+        button.append(timer);
+      }
+      item.append(button);
+      buttons[step] = button;
+      return item;
+    }),
+  );
+  return buttons;
+}
+
+function develop({ paper, hour }, config) {
+  const exposure = HOURS[hour] * config.papers[paper].speed;
   let verdict = "good";
   if (exposure < GOOD.min) verdict = "under";
   if (exposure > GOOD.max) verdict = "over";
+  if (config.papers[paper].poor) verdict = "poor";
   return {
     exposure,
     verdict,
-    stains: Boolean(PAPERS[paper].stains),
+    stains: Boolean(config.papers[paper].stains),
     rescued: false,
   };
 }
 
-function printMatrix({ exposure }) {
-  const { dark, light } = PROCESSES.cyanotype;
+function printMatrix({ exposure, verdict }, { dark, light }) {
+  if (verdict === "poor")
+    return duotoneMatrix(mix(dark, light, 0.35), mix(light, dark, 0.15), 0.7);
   if (exposure < GOOD.min) {
     const pale = Math.min(0.7, (GOOD.min - exposure) / 0.45);
     return duotoneMatrix(mix(dark, light, pale), light, 1);
@@ -160,14 +272,8 @@ function printMatrix({ exposure }) {
   return duotoneMatrix(dark, light, 1.15);
 }
 
-const VERDICTS = {
-  good: "Bona còpia.",
-  under: "Subexposada: massa pàl·lida.",
-  over: "Sobreexposada: les ombres es tanquen.",
-};
-
-async function createPrint(original, choice, result) {
-  const paper = PAPERS[choice.paper];
+async function createPrint(original, choice, result, config, onPainted) {
+  const paper = config.papers[choice.paper];
   const item = document.createElement("li");
   item.className = "print-card";
   item.innerHTML = `
@@ -177,7 +283,7 @@ async function createPrint(original, choice, result) {
         <strong class="js-verdict"></strong>
         <span>${paper.ref} · ${paper.name}</span>
         <span>${PREPARATIONS[choice.preparation]} · ${choice.hour} h · ${EXPOSURE_MINUTES}′</span>
-        <span class="note">El 2009: ${paper.group2009.toLowerCase()}.</span>
+        <span class="note">A les proves de 2009: ${paper.group2009}.</span>
       </figcaption>
     </figure>
   `;
@@ -185,18 +291,21 @@ async function createPrint(original, choice, result) {
   const verdict = item.querySelector(".js-verdict");
 
   const paint = async () => {
-    const matrix = printMatrix(result);
-    const blob = await renderFilteredImage(original, matrix, {
+    const matrix = printMatrix(result, config.process);
+    const effects = {
       grain: result.stains ? 70 : 30,
       vignette: result.stains ? 35 : 10,
-    });
-    if (image.src.startsWith("blob:")) URL.revokeObjectURL(image.src);
+    };
+    const blob = await renderFilteredImage(original, matrix, effects);
+    const previous = image.src;
     image.src = URL.createObjectURL(blob);
+    if (previous.startsWith("blob:")) URL.revokeObjectURL(previous);
     verdict.textContent =
       VERDICTS[result.verdict] +
       (result.stains ? " Amb taques." : "") +
       (result.rescued ? " Vernissada amb goma aràbiga." : "");
     image.alt = `Còpia: ${verdict.textContent}`;
+    onPainted(image.src, image.alt);
   };
 
   await paint();

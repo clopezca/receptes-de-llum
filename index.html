@@ -1,902 +1,788 @@
 <!doctype html>
 <html lang="ca">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Receptes de llum</title>
-    <meta
-      name="description"
-      content="Del laboratori fotogràfic al filtre digital: un interactiu sobre remediació i transcodificació."
-    />
+    <meta name="description"
+        content="Del laboratori fotogràfic al filtre digital: un interactiu sobre remediació i transcodificació." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap"
-    />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" />
     <link rel="stylesheet" href="css/styles.css" />
     <script type="module" src="js/main.js"></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap hero">
-        <h1>Receptes<br />de llum</h1>
-        <p class="lede">
-          Del laboratori fotogràfic al filtre digital. Una mateixa fotografia,
-          revelada amb química i amb programari.
-        </p>
-        <dl class="reagent-label hero-label" data-process="both">
-          <div>
-            <dt>Data</dt>
-            <dd>Maig de 2009, 11–14 h</dd>
-          </div>
-          <div>
-            <dt>Exposició</dt>
-            <dd>4′ al sol directe</dd>
-          </div>
-          <div>
-            <dt>Processos</dt>
-            <dd>Cianotípia · Van Dyke</dd>
-          </div>
-        </dl>
-      </div>
+</head>
 
-      <nav class="step-wedge" aria-label="Estacions">
-        <ol>
-          <li>
-            <a href="#analogica-o-digital"
-              ><span class="strip-step">0</span> Analògica o digital?</a
-            >
-          </li>
-          <li>
-            <a href="#cianotipia"
-              ><span class="strip-step">1</span> Cianotípia</a
-            >
-          </li>
-          <li>
-            <a href="#van-dyke"><span class="strip-step">2</span> Van Dyke</a>
-          </li>
-          <li>
-            <a href="#en-un-clic"
-              ><span class="strip-step">3</span> En un clic</a
-            >
-          </li>
-          <li>
-            <a href="#taller"
-              ><span class="strip-step">4</span> La teva recepta</a
-            >
-          </li>
-          <li>
-            <a href="#tancament"><span class="strip-step">5</span> Tancament</a>
-          </li>
-        </ol>
-      </nav>
+<body>
+    <header class="site-header">
+        <div class="wrap hero">
+            <h1>Receptes<br />de llum</h1>
+            <p class="lede">
+                Del laboratori fotogràfic al filtre digital. Una mateixa fotografia,
+                revelada amb química i amb programari.
+            </p>
+            <dl class="reagent-label hero-label" data-process="both">
+                <div>
+                    <dt>Data</dt>
+                    <dd>Maig de 2009, 11–14 h</dd>
+                </div>
+                <div>
+                    <dt>Exposició</dt>
+                    <dd>4′ al sol directe</dd>
+                </div>
+                <div>
+                    <dt>Processos</dt>
+                    <dd>Cianotípia · Van Dyke</dd>
+                </div>
+            </dl>
+        </div>
+
+        <nav class="step-wedge" aria-label="Estacions">
+            <ol>
+                <li>
+                    <a href="#analogica-o-digital"><span class="strip-step">0</span> Analògica o digital?</a>
+                </li>
+                <li>
+                    <a href="#cianotipia"><span class="strip-step">1</span> Cianotípia</a>
+                </li>
+                <li>
+                    <a href="#van-dyke"><span class="strip-step">2</span> Van Dyke</a>
+                </li>
+                <li>
+                    <a href="#en-un-clic"><span class="strip-step">3</span> En un clic</a>
+                </li>
+                <li>
+                    <a href="#taller"><span class="strip-step">4</span> La teva recepta</a>
+                </li>
+                <li>
+                    <a href="#tancament"><span class="strip-step">5</span> Tancament</a>
+                </li>
+            </ol>
+        </nav>
     </header>
 
     <main>
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="wrap intro-grid">
-          <div class="intro-text">
-            <h2 id="intro-title">Abans de començar</h2>
-            <p>
-              El maig de 2009 vaig fer una cianotípia i una còpia Van Dyke a
-              partir d'aquesta fotografia: química, paper i quatre minuts de
-              sol. Avui, el mateix aspecte s'aconsegueix amb un filtre. Aquest
-              interactiu compara les dues receptes.
-            </p>
-            <p>
-              Recorre les estacions en ordre o salta a la que vulguis des de la
-              tira de dalt. A cada estació hi ha alguna cosa per tocar.
-            </p>
-          </div>
-          <dl class="glossary">
-            <div>
-              <dt>Remediació</dt>
-              <dd>Text pendent</dd>
-            </div>
-            <div>
-              <dt>Transcodificació</dt>
-              <dd>Text pendent</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section
-        class="station"
-        id="analogica-o-digital"
-        aria-labelledby="s0-title"
-      >
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="digital">
-            <p class="label-number">Nº 0</p>
-            <h2 id="s0-title">Analògica o digital?</h2>
-            <p class="label-formula">
-              6 mostres · 3 químiques, 3 de programari
-            </p>
-          </header>
-          <p class="station-hint">
-            Mira les sis mostres i decideix, una per una, si són química o
-            programari. Pista: fixa’t en el paper.
-          </p>
-
-          <div class="quiz" data-station="quiz">
-            <ol class="quiz-grid js-quiz-grid">
-              <li class="quiz-loading note">Preparant les mostres…</li>
-            </ol>
-            <div class="quiz-footer">
-              <p class="quiz-score js-quiz-score" role="status"></p>
-              <button
-                type="button"
-                class="button button--small js-quiz-reset"
-                hidden
-              >
-                Torna-hi
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="station" id="cianotipia" aria-labelledby="s1-title">
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="cyanotype">
-            <p class="label-number">Nº 1</p>
-            <h2 id="s1-title">Laboratori: cianotípia</h2>
-            <p class="label-formula">
-              Citrat fèrric amoniacal + ferricianur de potassi · 4′ · sol
-              directe
-            </p>
-          </header>
-          <p class="station-hint">
-            Tria el paper, la preparació i l’hora del dia. L’exposició sempre
-            dura quatre minuts, i no es pot desfer.
-          </p>
-
-          <aside
-            class="reagent-label process-sheet"
-            data-process="cyanotype"
-            aria-label="Fitxa de la cianotípia"
-          >
-            <dl>
-              <div>
-                <dt>Què és</dt>
-                <dd>
-                  Un procés fotogràfic per contacte: un negatiu sobre paper
-                  sensibilitzat amb sals de ferro, exposat a la llum
-                  ultraviolada. La imatge surt blava.
-                </dd>
-              </div>
-              <div>
-                <dt>Recepta</dt>
-                <dd>
-                  Citrat fèrric amoniacal i ferricianur de potassi, en dues
-                  solucions que es barregen abans de fer-les servir.
-                </dd>
-              </div>
-              <div>
-                <dt>Passos</dt>
-                <dd>
-                  <ol>
-                    <li>
-                      Sensibilitzar el paper i deixar-lo assecar a les fosques.
-                    </li>
-                    <li>Posar-hi el negatiu a sobre.</li>
-                    <li>Exposar-lo al sol.</li>
-                    <li>Rentar-lo amb aigua: és l'únic fixat que necessita.</li>
-                  </ol>
-                </dd>
-              </div>
-              <div>
-                <dt>Química</dt>
-                <dd>
-                  La llum redueix el ferro i es forma blau de Prússia. El rentat
-                  elimina les sals que no s’han exposat.
-                </dd>
-              </div>
-              <div>
-                <dt>Història</dt>
-                <dd>
-                  John Herschel la va documentar el 1842. El 1843, Anna Atkins
-                  va publicar <cite>Photographs of British Algae</cite>, el
-                  primer llibre il·lustrat amb fotografies. Des de 1872 es va
-                  comercialitzar per copiar plànols: d'aquí ve el
-                  <i lang="en">blueprint</i>.
-                </dd>
-              </div>
-              <div>
-                <dt>Les meves còpies</dt>
-                <dd>
-                  Paper Guarro d'aquarel·la de 240 g, 4′ al sol directe, maig de
-                  2009. Vam provar tres preparacions del paper: cola de conill,
-                  gelatina i sense tractar.
-                </dd>
-              </div>
-            </dl>
-          </aside>
-
-          <div class="darkroom" data-station="darkroom">
-            <form class="darkroom-form js-darkroom-form" novalidate>
-              <div class="field">
-                <label for="darkroom-paper">Paper</label>
-                <select id="darkroom-paper" name="paper">
-                  <option value="arches">
-                    Nº 25 · Arches aquarel·la gra fi, 640 g
-                  </option>
-                  <option value="guarroCoarse" selected>
-                    Nº 55 · Guarro aquarel·la gra gruixut, 240 g
-                  </option>
-                  <option value="hahnemuhle">
-                    Nº 13 · Hahnemühle Cézanne mat, 300 g
-                  </option>
-                  <option value="guarroFine">
-                    Nº 53 · Guarro aquarel·la gra fi, 240 g
-                  </option>
-                </select>
-              </div>
-              <fieldset class="choice">
-                <legend>Preparació del paper</legend>
-                <label
-                  ><input type="radio" name="preparation" value="rabbitGlue" />
-                  Cola de conill</label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    name="preparation"
-                    value="gelatin"
-                    checked
-                  />
-                  Gelatina</label
-                >
-                <label
-                  ><input type="radio" name="preparation" value="none" /> Sense
-                  tractar</label
-                >
-              </fieldset>
-              <fieldset class="choice">
-                <legend>Hora del dia</legend>
-                <label
-                  ><input type="radio" name="hour" value="11" checked /> 11
-                  h</label
-                >
-                <label
-                  ><input type="radio" name="hour" value="12" /> 12 h</label
-                >
-                <label
-                  ><input type="radio" name="hour" value="13" /> 13 h</label
-                >
-              </fieldset>
-            </form>
-
-            <div class="bench">
-              <div class="sheet js-sheet" data-state="blank" aria-hidden="true">
-                <img
-                  class="sheet-negative"
-                  src="img/original-2009.jpg"
-                  alt=""
-                  width="1280"
-                  height="620"
-                />
-                <span class="sheet-sun"></span>
-              </div>
-              <p class="note">
-                El negatiu s'ha fet amb programari, com es fa avui: el de 2009
-                s'ha perdut.
-              </p>
-
-              <ol class="steps">
-                <li>
-                  <button
-                    type="button"
-                    class="button button--small"
-                    data-step="sensitize"
-                  >
-                    Sensibilitza el paper
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="button button--small"
-                    data-step="negative"
-                  >
-                    Col·loca el negatiu
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="button button--small"
-                    data-step="expose"
-                  >
-                    Exposa al sol
-                  </button>
-                  <output class="timer js-timer" aria-live="off">4:00</output>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="button button--small"
-                    data-step="wash"
-                  >
-                    Renta amb aigua
-                  </button>
-                </li>
-              </ol>
-              <p class="note">
-                Al laboratori, quatre minuts. Aquí, quatre segons.
-              </p>
-
-              <div class="bench-footer">
-                <p>Fulls gastats: <strong class="js-sheets-used">0</strong></p>
-                <button
-                  type="button"
-                  class="button button--small js-new-print"
-                  hidden
-                >
-                  Fes una altra còpia
-                </button>
-              </div>
-            </div>
-
-            <div class="prints">
-              <h3 class="prints-title">Les teves còpies</h3>
-              <ul class="print-list js-print-list" aria-live="polite"></ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="station" id="van-dyke" aria-labelledby="s2-title">
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="vandyke">
-            <p class="label-number">Nº 2</p>
-            <h2 id="s2-title">Laboratori: Van Dyke</h2>
-            <p class="label-formula">
-              Citrat fèrric amoniacal + àcid tartàric + nitrat de plata · 4′ ·
-              fixat
-            </p>
-          </header>
-          <p class="station-hint">
-            Com la cianotípia, però amb ferro i plata: la imatge surt marró. Al
-            final, cal fixar la còpia.
-          </p>
-          <aside
-            class="reagent-label process-sheet"
-            data-process="vandyke"
-            aria-label="Fitxa del Van Dyke"
-          >
-            <dl>
-              <div>
-                <dt>Què és</dt>
-                <dd>
-                  Un procés germà de la cianotípia, de la família del ferro i la
-                  plata. La imatge surt marró.
-                </dd>
-              </div>
-              <div>
-                <dt>Recepta</dt>
-                <dd>
-                  Citrat fèrric amoniacal, àcid tartàric i nitrat de plata, en
-                  una sola solució.
-                </dd>
-              </div>
-              <div>
-                <dt>Passos</dt>
-                <dd>
-                  <ol>
-                    <li>
-                      Sensibilitzar el paper i deixar-lo assecar a les fosques.
-                    </li>
-                    <li>Posar-hi el negatiu a sobre.</li>
-                    <li>Exposar-lo al sol.</li>
-                    <li>Rentar-lo amb aigua.</li>
-                    <li>Fixar-lo amb tiosulfat de sodi diluït.</li>
-                    <li>Rentar-lo de nou.</li>
-                  </ol>
-                </dd>
-              </div>
-              <div>
-                <dt>Química</dt>
-                <dd>
-                  La llum redueix el ferro, i el ferro reduït converteix la
-                  plata en plata metàl·lica, que dona el marró. El fixat elimina
-                  la plata no exposada; sense fixar, la còpia no és estable.
-                </dd>
-              </div>
-              <div>
-                <dt>Història</dt>
-                <dd>
-                  Pertany a la família de processos de ferro i plata que va
-                  iniciar John Herschel el 1842. El 1895, l’empresa alemanya
-                  Arndt und Troost en va patentar una fórmula. El nom remet al
-                  pintor Anthony van Dyck: els marrons de la còpia recorden els
-                  de les seves pintures.
-                </dd>
-              </div>
-              <div>
-                <dt>Les meves còpies</dt>
-                <dd>
-                  Paper Bàsic de 350 g, 4′ al sol directe, maig de 2009. El sol
-                  de migdia en va sobreexposar algunes, i les vam salvar en part
-                  amb una capa de goma aràbiga.
-                </dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section class="station" id="en-un-clic" aria-labelledby="s3-title">
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="digital">
-            <p class="label-number">Nº 3</p>
-            <h2 id="s3-title">El mateix, en un clic</h2>
-            <p class="label-formula">feColorMatrix · 20 valors · 0,1 s</p>
-          </header>
-          <p class="station-hint">
-            Compara la còpia de 2009 amb el filtre: fixa’t en les ombres i en la
-            vora del paper. Després, obre el filtre per veure què hi ha a sota.
-          </p>
-
-          <div class="compare" data-station="filter">
-            <fieldset class="process-picker">
-              <legend>Procés</legend>
-              <label
-                ><input type="radio" name="process" value="cyanotype" checked />
-                Cianotípia</label
-              >
-              <label
-                ><input type="radio" name="process" value="vandyke" /> Van
-                Dyke</label
-              >
-            </fieldset>
-
-            <div class="compare-grid">
-              <figure class="specimen">
-                <img
-                  src="img/original-2009.jpg"
-                  alt="Fotografia original de 2009: roba estesa amb pinces en un estenedor, al costat d'una finestra."
-                  width="1280"
-                  height="620"
-                />
-                <figcaption>
-                  <span>Original</span><span>Fotografia · 2009</span>
-                </figcaption>
-              </figure>
-
-              <figure class="specimen">
-                <img
-                  class="js-print"
-                  src="img/cyanotype-2009.jpg"
-                  alt="Cianotípia de 2009: la roba estesa en blau de Prússia sobre paper d'aquarel·la."
-                  width="1508"
-                  height="734"
-                />
-                <figcaption>
-                  <span class="js-print-name">Cianotípia</span
-                  ><span>4′ de sol · 2009</span>
-                </figcaption>
-              </figure>
-
-              <figure class="specimen specimen--filter">
-                <div class="flip js-flip">
-                  <div class="flip-face flip-front">
-                    <img
-                      class="filtered"
-                      src="img/original-2009.jpg"
-                      alt=""
-                      width="1280"
-                      height="620"
-                    />
-                  </div>
-                  <div class="flip-face flip-back" aria-live="polite">
-                    <div class="layer js-layer-culture">
-                      <ul class="culture-list js-culture"></ul>
-                    </div>
-                    <div class="layer js-layer-code" hidden>
-                      <table class="matrix js-matrix">
-                        <caption class="visually-hidden">
-                          Matriu de color del filtre
-                        </caption>
-                      </table>
-                    </div>
-                  </div>
+        <section class="intro" aria-labelledby="intro-title">
+            <div class="wrap intro-grid">
+                <div class="intro-text">
+                    <h2 id="intro-title">Abans de començar</h2>
+                    <p>
+                        El maig de 2009 vaig fer una cianotípia i una còpia Van Dyke a
+                        partir d'aquesta fotografia: química, paper i quatre minuts de
+                        sol. Avui, el mateix aspecte s'aconsegueix amb un filtre. Aquest
+                        interactiu compara les dues receptes.
+                    </p>
+                    <p>
+                        Recorre les estacions en ordre o salta a la que vulguis des de la
+                        tira de dalt. A cada estació hi ha alguna cosa per tocar.
+                    </p>
                 </div>
-                <figcaption>
-                  <span
-                    >Filtre <span class="js-filter-name">Cianotípia</span></span
-                  ><span>1 clic · 2026</span>
-                </figcaption>
-              </figure>
+                <dl class="glossary">
+                    <div>
+                        <dt>Remediació</dt>
+                        <dd>Text pendent</dd>
+                    </div>
+                    <div>
+                        <dt>Transcodificació</dt>
+                        <dd>Text pendent</dd>
+                    </div>
+                </dl>
             </div>
+        </section>
 
-            <div class="compare-actions">
-              <button
-                type="button"
-                class="button js-flip-toggle"
-                aria-pressed="false"
-              >
-                Obre el filtre
-              </button>
-              <div
-                class="layer-switch js-layer-switch"
-                role="group"
-                aria-label="Capa"
-                hidden
-              >
-                <button
-                  type="button"
-                  class="button button--small"
-                  aria-pressed="true"
-                  data-layer="culture"
-                >
-                  Capa cultural
-                </button>
-                <button
-                  type="button"
-                  class="button button--small"
-                  aria-pressed="false"
-                  data-layer="code"
-                >
-                  Capa informàtica
-                </button>
-              </div>
+        <section class="station" id="analogica-o-digital" aria-labelledby="s0-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="digital">
+                    <p class="label-number">Nº 0</p>
+                    <h2 id="s0-title">Analògica o digital?</h2>
+                    <p class="label-formula">
+                        6 mostres · 3 químiques, 3 de programari
+                    </p>
+                </header>
+                <p class="station-hint">
+                    Mira les sis mostres i decideix, una per una, si són química o
+                    programari. Pista: fixa’t en el paper.
+                </p>
+
+                <div class="quiz" data-station="quiz">
+                    <ol class="quiz-grid js-quiz-grid">
+                        <li class="quiz-loading note">Preparant les mostres…</li>
+                    </ol>
+                    <div class="quiz-footer">
+                        <p class="quiz-score js-quiz-score" role="status"></p>
+                        <button type="button" class="button button--small js-quiz-reset" hidden>
+                            Torna-hi
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <svg class="visually-hidden" aria-hidden="true" focusable="false">
-            <filter id="process-filter" color-interpolation-filters="sRGB">
-              <feColorMatrix
-                class="js-color-matrix"
-                type="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-              ></feColorMatrix>
-            </filter>
-          </svg>
-        </div>
-      </section>
+        <section class="station" id="cianotipia" aria-labelledby="s1-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="cyanotype">
+                    <p class="label-number">Nº 1</p>
+                    <h2 id="s1-title">Laboratori: cianotípia</h2>
+                    <p class="label-formula">
+                        Citrat fèrric amoniacal + ferricianur de potassi · 4′ · sol
+                        directe
+                    </p>
+                </header>
+                <p class="station-hint">
+                    Tria el paper, la preparació i l’hora del dia. L’exposició sempre
+                    dura quatre minuts, i no es pot desfer.
+                </p>
 
-      <section class="station" id="taller" aria-labelledby="s4-title">
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="digital">
-            <p class="label-number">Nº 4</p>
-            <h2 id="s4-title">Taller: la teva recepta</h2>
-            <p class="label-formula">
-              Ombres · paper · contrast · gra · vinyeta
-            </p>
-          </header>
-          <p class="station-hint">
-            Mou els controls, posa nom al teu filtre i copia’n l’enllaç. Si
-            vols, prova-ho amb una foto teva: no surt del teu navegador.
-          </p>
+                <aside class="reagent-label process-sheet" data-process="cyanotype" aria-label="Fitxa de la cianotípia">
+                    <dl>
+                        <div>
+                            <dt>Què és</dt>
+                            <dd>
+                                Un procés fotogràfic per contacte: un negatiu sobre paper
+                                sensibilitzat amb sals de ferro, exposat a la llum
+                                ultraviolada. La imatge surt blava.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Recepta</dt>
+                            <dd>
+                                Citrat fèrric amoniacal i ferricianur de potassi, en dues
+                                solucions que es barregen abans de fer-les servir.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Passos</dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        Sensibilitzar el paper i deixar-lo assecar a les fosques.
+                                    </li>
+                                    <li>Posar-hi el negatiu a sobre.</li>
+                                    <li>Exposar-lo al sol.</li>
+                                    <li>Rentar-lo amb aigua: és l'únic fixat que necessita.</li>
+                                </ol>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Química</dt>
+                            <dd>
+                                La llum redueix el ferro i es forma blau de Prússia. El rentat
+                                elimina les sals que no s’han exposat.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Història</dt>
+                            <dd>
+                                John Herschel la va documentar el 1842. El 1843, Anna Atkins
+                                va publicar <cite>Photographs of British Algae</cite>, el
+                                primer llibre il·lustrat amb fotografies. Des de 1872 es va
+                                comercialitzar per copiar plànols: d'aquí ve el
+                                <i lang="en">blueprint</i>.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Les meves còpies</dt>
+                            <dd>
+                                Paper Guarro d'aquarel·la de 240 g, 4′ al sol directe, maig de
+                                2009. Vam provar tres preparacions del paper: cola de conill,
+                                gelatina i sense tractar.
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
 
-          <div class="workshop" data-station="workshop">
-            <div class="workshop-preview">
-              <figure class="specimen">
-                <div class="preview-frame">
-                  <img
-                    class="js-workshop-image workshop-filtered"
-                    src="img/original-2009.jpg"
-                    alt="La imatge de mostra amb el teu filtre aplicat."
-                    width="1280"
-                    height="620"
-                  />
-                  <svg
-                    class="grain js-grain"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <filter id="grain-noise">
-                      <feTurbulence
-                        type="fractalNoise"
-                        baseFrequency="0.85"
-                        numOctaves="2"
-                        stitchTiles="stitch"
-                      ></feTurbulence>
-                      <feColorMatrix type="saturate" values="0"></feColorMatrix>
-                      <feComponentTransfer>
-                        <feFuncR
-                          type="linear"
-                          slope="3"
-                          intercept="-1"
-                        ></feFuncR>
-                        <feFuncG
-                          type="linear"
-                          slope="3"
-                          intercept="-1"
-                        ></feFuncG>
-                        <feFuncB
-                          type="linear"
-                          slope="3"
-                          intercept="-1"
-                        ></feFuncB>
-                      </feComponentTransfer>
+                <div class="darkroom" data-station="darkroom" data-process="cyanotype">
+                    <div class="procedure">
+                        <form class="darkroom-form js-darkroom-form" novalidate>
+                            <div class="field">
+                                <label for="cyanotype-paper">Paper</label>
+                                <select id="cyanotype-paper" name="paper"></select>
+                            </div>
+                            <fieldset class="choice-cards">
+                                <legend>Preparació del paper</legend>
+                                <label class="choice-card"><input type="radio" name="preparation"
+                                        value="rabbitGlue" /><span>Cola de conill</span></label>
+                                <label class="choice-card"><input type="radio" name="preparation" value="gelatin"
+                                        checked /><span>Gelatina</span></label>
+                                <label class="choice-card"><input type="radio" name="preparation"
+                                        value="none" /><span>Sense tractar</span></label>
+                            </fieldset>
+                            <fieldset class="choice-cards">
+                                <legend>Hora del dia</legend>
+                                <label class="choice-card"><input type="radio" name="hour" value="11" checked /><svg
+                                        class="sun" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="34.0" y1="24.0" x2="38.0" y2="24.0" />
+                                            <line x1="31.1" y1="31.1" x2="33.9" y2="33.9" />
+                                            <line x1="24.0" y1="34.0" x2="24.0" y2="38.0" />
+                                            <line x1="16.9" y1="31.1" x2="14.1" y2="33.9" />
+                                            <line x1="14.0" y1="24.0" x2="10.0" y2="24.0" />
+                                            <line x1="16.9" y1="16.9" x2="14.1" y2="14.1" />
+                                            <line x1="24.0" y1="14.0" x2="24.0" y2="10.0" />
+                                            <line x1="31.1" y1="16.9" x2="33.9" y2="14.1" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="7" fill="currentColor" />
+                                    </svg><span>11 h</span><span class="visually-hidden">, sol de matí</span></label>
+                                <label class="choice-card"><input type="radio" name="hour" value="12" /><svg class="sun"
+                                        viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="35.5" y1="24.0" x2="41.5" y2="24.0" />
+                                            <line x1="32.1" y1="32.1" x2="36.4" y2="36.4" />
+                                            <line x1="24.0" y1="35.5" x2="24.0" y2="41.5" />
+                                            <line x1="15.9" y1="32.1" x2="11.6" y2="36.4" />
+                                            <line x1="12.5" y1="24.0" x2="6.5" y2="24.0" />
+                                            <line x1="15.9" y1="15.9" x2="11.6" y2="11.6" />
+                                            <line x1="24.0" y1="12.5" x2="24.0" y2="6.5" />
+                                            <line x1="32.1" y1="15.9" x2="36.4" y2="11.6" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="8.5" fill="currentColor" />
+                                    </svg><span>12 h</span><span class="visually-hidden">, sol més fort</span></label>
+                                <label class="choice-card"><input type="radio" name="hour" value="13" /><svg class="sun"
+                                        viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="37.0" y1="24.0" x2="45.0" y2="24.0" />
+                                            <line x1="33.2" y1="33.2" x2="38.8" y2="38.8" />
+                                            <line x1="24.0" y1="37.0" x2="24.0" y2="45.0" />
+                                            <line x1="14.8" y1="33.2" x2="9.2" y2="38.8" />
+                                            <line x1="11.0" y1="24.0" x2="3.0" y2="24.0" />
+                                            <line x1="14.8" y1="14.8" x2="9.2" y2="9.2" />
+                                            <line x1="24.0" y1="11.0" x2="24.0" y2="3.0" />
+                                            <line x1="33.2" y1="14.8" x2="38.8" y2="9.2" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="10" fill="currentColor" />
+                                    </svg><span>13 h</span><span class="visually-hidden">, sol de migdia, el més
+                                        fort</span></label>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="bench">
+                        <div class="sheet js-sheet" data-state="blank">
+                            <img class="sheet-negative" src="img/original-2009.jpg" alt="" width="1280" height="620" />
+                            <span class="sheet-sun"></span>
+                            <img class="sheet-print js-sheet-print" alt="" width="1280" height="620" hidden />
+                        </div>
+                        <p class="note">
+                            El negatiu s'ha fet amb programari, com es fa avui: el de 2009
+                            s'ha perdut.
+                        </p>
+
+                        <div class="bench-footer">
+                            <p>Fulls gastats: <strong class="js-sheets-used">0</strong></p>
+                            <button type="button" class="button button--small js-new-print" hidden>
+                                Fes una altra còpia
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stepper">
+                        <ol class="steps js-steps"></ol>
+                        <p class="note">
+                            Al laboratori, quatre minuts. Aquí, quatre segons.
+                        </p>
+                    </div>
+
+                    <div class="prints">
+                        <h3 class="prints-title">Les teves còpies</h3>
+                        <ul class="print-list js-print-list" aria-live="polite"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="station" id="van-dyke" aria-labelledby="s2-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="vandyke">
+                    <p class="label-number">Nº 2</p>
+                    <h2 id="s2-title">Laboratori: Van Dyke</h2>
+                    <p class="label-formula">
+                        Citrat fèrric amoniacal + àcid tartàric + nitrat de plata · 4′ ·
+                        fixat
+                    </p>
+                </header>
+                <p class="station-hint">
+                    Com la cianotípia, però amb ferro i plata: la imatge surt marró. Al
+                    final, cal fixar la còpia.
+                </p>
+                <aside class="reagent-label process-sheet" data-process="vandyke" aria-label="Fitxa del Van Dyke">
+                    <dl>
+                        <div>
+                            <dt>Què és</dt>
+                            <dd>
+                                Un procés germà de la cianotípia, de la família del ferro i la
+                                plata. La imatge surt marró.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Recepta</dt>
+                            <dd>
+                                Citrat fèrric amoniacal, àcid tartàric i nitrat de plata, en
+                                una sola solució.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Passos</dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        Sensibilitzar el paper i deixar-lo assecar a les fosques.
+                                    </li>
+                                    <li>Posar-hi el negatiu a sobre.</li>
+                                    <li>Exposar-lo al sol.</li>
+                                    <li>Rentar-lo amb aigua.</li>
+                                    <li>Fixar-lo amb tiosulfat de sodi diluït.</li>
+                                    <li>Rentar-lo de nou.</li>
+                                </ol>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Química</dt>
+                            <dd>
+                                La llum redueix el ferro, i el ferro reduït converteix la
+                                plata en plata metàl·lica, que dona el marró. El fixat elimina
+                                la plata no exposada; sense fixar, la còpia no és estable.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Història</dt>
+                            <dd>
+                                Pertany a la família de processos de ferro i plata que va
+                                iniciar John Herschel el 1842. El 1895, l’empresa alemanya
+                                Arndt und Troost en va patentar una fórmula. El nom remet al
+                                pintor Anthony van Dyck: els marrons de la còpia recorden els
+                                de les seves pintures.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Les meves còpies</dt>
+                            <dd>
+                                Paper Bàsic de 350 g, 4′ al sol directe, maig de 2009. El sol
+                                de migdia en va sobreexposar algunes, i les vam salvar en part
+                                amb una capa de goma aràbiga.
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
+
+                <div class="darkroom" data-station="darkroom" data-process="vandyke">
+                    <div class="procedure">
+                        <form class="darkroom-form js-darkroom-form" novalidate>
+                            <div class="field">
+                                <label for="vandyke-paper">Paper</label>
+                                <select id="vandyke-paper" name="paper"></select>
+                            </div>
+                            <fieldset class="choice-cards">
+                                <legend>Preparació del paper</legend>
+                                <label class="choice-card"><input type="radio" name="preparation"
+                                        value="rabbitGlue" /><span>Cola de conill</span></label>
+                                <label class="choice-card"><input type="radio" name="preparation" value="gelatin"
+                                        checked /><span>Gelatina</span></label>
+                                <label class="choice-card"><input type="radio" name="preparation"
+                                        value="none" /><span>Sense tractar</span></label>
+                            </fieldset>
+                            <fieldset class="choice-cards">
+                                <legend>Hora del dia</legend>
+                                <label class="choice-card"><input type="radio" name="hour" value="11" checked /><svg
+                                        class="sun" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="34.0" y1="24.0" x2="38.0" y2="24.0" />
+                                            <line x1="31.1" y1="31.1" x2="33.9" y2="33.9" />
+                                            <line x1="24.0" y1="34.0" x2="24.0" y2="38.0" />
+                                            <line x1="16.9" y1="31.1" x2="14.1" y2="33.9" />
+                                            <line x1="14.0" y1="24.0" x2="10.0" y2="24.0" />
+                                            <line x1="16.9" y1="16.9" x2="14.1" y2="14.1" />
+                                            <line x1="24.0" y1="14.0" x2="24.0" y2="10.0" />
+                                            <line x1="31.1" y1="16.9" x2="33.9" y2="14.1" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="7" fill="currentColor" />
+                                    </svg><span>11 h</span><span class="visually-hidden">, sol de matí</span></label>
+                                <label class="choice-card"><input type="radio" name="hour" value="12" /><svg class="sun"
+                                        viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="35.5" y1="24.0" x2="41.5" y2="24.0" />
+                                            <line x1="32.1" y1="32.1" x2="36.4" y2="36.4" />
+                                            <line x1="24.0" y1="35.5" x2="24.0" y2="41.5" />
+                                            <line x1="15.9" y1="32.1" x2="11.6" y2="36.4" />
+                                            <line x1="12.5" y1="24.0" x2="6.5" y2="24.0" />
+                                            <line x1="15.9" y1="15.9" x2="11.6" y2="11.6" />
+                                            <line x1="24.0" y1="12.5" x2="24.0" y2="6.5" />
+                                            <line x1="32.1" y1="15.9" x2="36.4" y2="11.6" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="8.5" fill="currentColor" />
+                                    </svg><span>12 h</span><span class="visually-hidden">, sol més fort</span></label>
+                                <label class="choice-card"><input type="radio" name="hour" value="13" /><svg class="sun"
+                                        viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <line x1="37.0" y1="24.0" x2="45.0" y2="24.0" />
+                                            <line x1="33.2" y1="33.2" x2="38.8" y2="38.8" />
+                                            <line x1="24.0" y1="37.0" x2="24.0" y2="45.0" />
+                                            <line x1="14.8" y1="33.2" x2="9.2" y2="38.8" />
+                                            <line x1="11.0" y1="24.0" x2="3.0" y2="24.0" />
+                                            <line x1="14.8" y1="14.8" x2="9.2" y2="9.2" />
+                                            <line x1="24.0" y1="11.0" x2="24.0" y2="3.0" />
+                                            <line x1="33.2" y1="14.8" x2="38.8" y2="9.2" />
+                                        </g>
+                                        <circle cx="24" cy="24" r="10" fill="currentColor" />
+                                    </svg><span>13 h</span><span class="visually-hidden">, sol de migdia, el més
+                                        fort</span></label>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="bench">
+                        <div class="sheet js-sheet" data-state="blank">
+                            <img class="sheet-negative" src="img/original-2009.jpg" alt="" width="1280" height="620" />
+                            <span class="sheet-sun"></span>
+                            <img class="sheet-print js-sheet-print" alt="" width="1280" height="620" hidden />
+                        </div>
+                        <p class="note">
+                            El negatiu s'ha fet amb programari, com es fa avui: el de 2009
+                            s'ha perdut.
+                        </p>
+
+                        <div class="bench-footer">
+                            <p>Fulls gastats: <strong class="js-sheets-used">0</strong></p>
+                            <button type="button" class="button button--small js-new-print" hidden>
+                                Fes una altra còpia
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stepper">
+                        <ol class="steps js-steps"></ol>
+                        <p class="note">
+                            Al laboratori, quatre minuts. Aquí, quatre segons.
+                        </p>
+                    </div>
+
+                    <div class="prints">
+                        <h3 class="prints-title">Les teves còpies</h3>
+                        <ul class="print-list js-print-list" aria-live="polite"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="station" id="en-un-clic" aria-labelledby="s3-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="digital">
+                    <p class="label-number">Nº 3</p>
+                    <h2 id="s3-title">El mateix, en un clic</h2>
+                    <p class="label-formula">feColorMatrix · 20 valors · 0,1 s</p>
+                </header>
+                <p class="station-hint">
+                    Compara la còpia de 2009 amb el filtre: fixa’t en les ombres i en la
+                    vora del paper. Després, obre el filtre per veure què hi ha a sota.
+                </p>
+
+                <div class="compare" data-station="filter">
+                    <fieldset class="process-picker">
+                        <legend>Procés</legend>
+                        <label><input type="radio" name="process" value="cyanotype" checked />
+                            Cianotípia</label>
+                        <label><input type="radio" name="process" value="vandyke" /> Van
+                            Dyke</label>
+                    </fieldset>
+
+                    <div class="compare-grid">
+                        <figure class="specimen">
+                            <img src="img/original-2009.jpg"
+                                alt="Fotografia original de 2009: roba estesa amb pinces en un estenedor, al costat d'una finestra."
+                                width="1280" height="620" />
+                            <figcaption>
+                                <span>Original</span><span>Fotografia · 2009</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="specimen">
+                            <img class="js-print" src="img/cyanotype-2009.jpg"
+                                alt="Cianotípia de 2009: la roba estesa en blau de Prússia sobre paper d'aquarel·la."
+                                width="1508" height="734" />
+                            <figcaption>
+                                <span class="js-print-name">Cianotípia</span><span>4′ de sol · 2009</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="specimen specimen--filter">
+                            <div class="flip js-flip">
+                                <div class="flip-face flip-front">
+                                    <img class="filtered" src="img/original-2009.jpg" alt="" width="1280"
+                                        height="620" />
+                                </div>
+                                <div class="flip-face flip-back" aria-live="polite">
+                                    <div class="layer js-layer-culture">
+                                        <ul class="culture-list js-culture"></ul>
+                                    </div>
+                                    <div class="layer js-layer-code" hidden>
+                                        <table class="matrix js-matrix">
+                                            <caption class="visually-hidden">
+                                                Matriu de color del filtre
+                                            </caption>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>
+                                <span>Filtre <span class="js-filter-name">Cianotípia</span></span><span>1 clic ·
+                                    2026</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="compare-actions">
+                        <button type="button" class="button js-flip-toggle" aria-pressed="false">
+                            Obre el filtre
+                        </button>
+                        <div class="layer-switch js-layer-switch" role="group" aria-label="Capa" hidden>
+                            <button type="button" class="button button--small" aria-pressed="true" data-layer="culture">
+                                Capa cultural
+                            </button>
+                            <button type="button" class="button button--small" aria-pressed="false" data-layer="code">
+                                Capa informàtica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <svg class="visually-hidden" aria-hidden="true" focusable="false">
+                    <filter id="process-filter" color-interpolation-filters="sRGB">
+                        <feColorMatrix class="js-color-matrix" type="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
                     </filter>
-                    <rect
-                      width="100%"
-                      height="100%"
-                      filter="url(#grain-noise)"
-                    ></rect>
-                  </svg>
-                  <div class="vignette js-vignette" aria-hidden="true"></div>
-                </div>
-                <figcaption>
-                  <span class="js-recipe-title">Recepta sense nom</span
-                  ><span class="js-image-source">Imatge de mostra · 2009</span>
-                </figcaption>
-              </figure>
-
-              <div class="photo-picker">
-                <label
-                  class="button button--small file-button"
-                  for="workshop-photo"
-                  >Prova-ho amb una foto teva</label
-                >
-                <input
-                  class="visually-hidden js-photo-input"
-                  type="file"
-                  id="workshop-photo"
-                  accept="image/*"
-                />
-                <button
-                  type="button"
-                  class="button button--small js-photo-reset"
-                  hidden
-                >
-                  Torna a la imatge de mostra
-                </button>
-                <button type="button" class="button button--small js-download">
-                  Descarrega la imatge
-                </button>
-                <p class="note js-photo-note">
-                  La teva foto no surt del navegador.
-                </p>
-                <p class="note js-download-status" role="status"></p>
-              </div>
-
-              <aside
-                class="reagent-label reagent-label--small recipe-label"
-                data-process="digital"
-                aria-labelledby="recipe-label-title"
-              >
-                <p class="label-number">La teva recepta</p>
-                <h3 id="recipe-label-title" class="js-label-name">
-                  Recepta sense nom
-                </h3>
-                <dl class="recipe-values js-recipe-values"></dl>
-                <details class="matrix-details">
-                  <summary>Veure la matriu</summary>
-                  <table class="matrix js-workshop-matrix">
-                    <caption class="visually-hidden">
-                      Matriu de color del teu filtre
-                    </caption>
-                  </table>
-                </details>
-                <div class="share">
-                  <label class="visually-hidden" for="recipe-link"
-                    >Enllaç a la recepta</label
-                  >
-                  <input
-                    type="text"
-                    id="recipe-link"
-                    class="js-recipe-link"
-                    readonly
-                  />
-                  <button type="button" class="button js-copy-link">
-                    Copia l'enllaç
-                  </button>
-                  <p class="note js-copy-status" role="status"></p>
-                  <p class="note">
-                    L'enllaç comparteix la recepta, no la foto.
-                  </p>
-                </div>
-              </aside>
+                </svg>
             </div>
+        </section>
 
-            <form class="workshop-controls js-workshop-form" novalidate>
-              <fieldset class="start-from">
-                <legend>Comença des de</legend>
-                <button
-                  type="button"
-                  class="button button--small"
-                  data-preset="cyanotype"
-                >
-                  Cianotípia
-                </button>
-                <button
-                  type="button"
-                  class="button button--small"
-                  data-preset="vandyke"
-                >
-                  Van Dyke
-                </button>
-                <button
-                  type="button"
-                  class="button button--small"
-                  data-preset="neutral"
-                >
-                  Blanc i negre
-                </button>
-              </fieldset>
-
-              <div class="field">
-                <label for="recipe-name">Nom del filtre</label>
-                <input
-                  type="text"
-                  id="recipe-name"
-                  name="name"
-                  maxlength="40"
-                  placeholder="Recepta sense nom"
-                  autocomplete="off"
-                  aria-describedby="recipe-name-hint"
-                />
-                <p class="note" id="recipe-name-hint">
-                  Per exemple, «Sol de migdia».
+        <section class="station" id="taller" aria-labelledby="s4-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="digital">
+                    <p class="label-number">Nº 4</p>
+                    <h2 id="s4-title">Taller: la teva recepta</h2>
+                    <p class="label-formula">
+                        Ombres · paper · contrast · gra · vinyeta
+                    </p>
+                </header>
+                <p class="station-hint">
+                    Mou els controls, posa nom al teu filtre i copia’n l’enllaç. Si
+                    vols, prova-ho amb una foto teva: no surt del teu navegador.
                 </p>
-              </div>
 
-              <div class="field-row">
-                <div class="field">
-                  <label for="recipe-shadows">Color de les ombres</label>
-                  <input
-                    type="color"
-                    id="recipe-shadows"
-                    name="shadows"
-                    value="#094a72"
-                  />
+                <div class="workshop" data-station="workshop">
+                    <div class="workshop-preview">
+                        <figure class="specimen">
+                            <div class="preview-frame">
+                                <img class="js-workshop-image workshop-filtered" src="img/original-2009.jpg"
+                                    alt="La imatge de mostra amb el teu filtre aplicat." width="1280" height="620" />
+                                <svg class="grain js-grain" aria-hidden="true" focusable="false">
+                                    <filter id="grain-noise">
+                                        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2"
+                                            stitchTiles="stitch"></feTurbulence>
+                                        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+                                        <feComponentTransfer>
+                                            <feFuncR type="linear" slope="3" intercept="-1"></feFuncR>
+                                            <feFuncG type="linear" slope="3" intercept="-1"></feFuncG>
+                                            <feFuncB type="linear" slope="3" intercept="-1"></feFuncB>
+                                        </feComponentTransfer>
+                                    </filter>
+                                    <rect width="100%" height="100%" filter="url(#grain-noise)"></rect>
+                                </svg>
+                                <div class="vignette js-vignette" aria-hidden="true"></div>
+                            </div>
+                            <figcaption>
+                                <span class="js-recipe-title">Recepta sense nom</span><span
+                                    class="js-image-source">Imatge de mostra · 2009</span>
+                            </figcaption>
+                        </figure>
+
+                        <div class="photo-picker">
+                            <label class="button button--small file-button" for="workshop-photo">Prova-ho amb una foto
+                                teva</label>
+                            <input class="visually-hidden js-photo-input" type="file" id="workshop-photo"
+                                accept="image/*" />
+                            <button type="button" class="button button--small js-photo-reset" hidden>
+                                Torna a la imatge de mostra
+                            </button>
+                            <button type="button" class="button button--small js-download">
+                                Descarrega la imatge
+                            </button>
+                            <p class="note js-photo-note">
+                                La teva foto no surt del navegador.
+                            </p>
+                            <p class="note js-download-status" role="status"></p>
+                        </div>
+
+                        <aside class="reagent-label reagent-label--small recipe-label" data-process="digital"
+                            aria-labelledby="recipe-label-title">
+                            <p class="label-number">La teva recepta</p>
+                            <h3 id="recipe-label-title" class="js-label-name">
+                                Recepta sense nom
+                            </h3>
+                            <dl class="recipe-values js-recipe-values"></dl>
+                            <details class="matrix-details">
+                                <summary>Veure la matriu</summary>
+                                <table class="matrix js-workshop-matrix">
+                                    <caption class="visually-hidden">
+                                        Matriu de color del teu filtre
+                                    </caption>
+                                </table>
+                            </details>
+                            <div class="share">
+                                <label class="visually-hidden" for="recipe-link">Enllaç a la recepta</label>
+                                <input type="text" id="recipe-link" class="js-recipe-link" readonly />
+                                <button type="button" class="button js-copy-link">
+                                    Copia l'enllaç
+                                </button>
+                                <p class="note js-copy-status" role="status"></p>
+                                <p class="note">
+                                    L'enllaç comparteix la recepta, no la foto.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <form class="workshop-controls js-workshop-form" novalidate>
+                        <fieldset class="start-from">
+                            <legend>Comença des de</legend>
+                            <button type="button" class="button button--small" data-preset="cyanotype">
+                                Cianotípia
+                            </button>
+                            <button type="button" class="button button--small" data-preset="vandyke">
+                                Van Dyke
+                            </button>
+                            <button type="button" class="button button--small" data-preset="neutral">
+                                Blanc i negre
+                            </button>
+                        </fieldset>
+
+                        <div class="field">
+                            <label for="recipe-name">Nom del filtre</label>
+                            <input type="text" id="recipe-name" name="name" maxlength="40"
+                                placeholder="Recepta sense nom" autocomplete="off"
+                                aria-describedby="recipe-name-hint" />
+                            <p class="note" id="recipe-name-hint">
+                                Per exemple, «Sol de migdia».
+                            </p>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="recipe-shadows">Color de les ombres</label>
+                                <input type="color" id="recipe-shadows" name="shadows" value="#094a72" />
+                            </div>
+                            <div class="field">
+                                <label for="recipe-paper">Color del paper</label>
+                                <input type="color" id="recipe-paper" name="paper" value="#f4f6f2" />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="recipe-contrast">Contrast
+                                <output class="js-out" for="recipe-contrast"></output></label>
+                            <input type="range" id="recipe-contrast" name="contrast" min="0.5" max="2" step="0.05"
+                                value="1" />
+                        </div>
+
+                        <div class="field">
+                            <label for="recipe-grain">Gra <output class="js-out" for="recipe-grain"></output></label>
+                            <input type="range" id="recipe-grain" name="grain" min="0" max="100" step="1" value="0" />
+                        </div>
+
+                        <div class="field">
+                            <label for="recipe-vignette">Vinyeta <output class="js-out"
+                                    for="recipe-vignette"></output></label>
+                            <input type="range" id="recipe-vignette" name="vignette" min="0" max="100" step="1"
+                                value="0" />
+                        </div>
+                    </form>
                 </div>
-                <div class="field">
-                  <label for="recipe-paper">Color del paper</label>
-                  <input
-                    type="color"
-                    id="recipe-paper"
-                    name="paper"
-                    value="#f4f6f2"
-                  />
-                </div>
-              </div>
 
-              <div class="field">
-                <label for="recipe-contrast"
-                  >Contrast
-                  <output class="js-out" for="recipe-contrast"></output
-                ></label>
-                <input
-                  type="range"
-                  id="recipe-contrast"
-                  name="contrast"
-                  min="0.5"
-                  max="2"
-                  step="0.05"
-                  value="1"
-                />
-              </div>
-
-              <div class="field">
-                <label for="recipe-grain"
-                  >Gra <output class="js-out" for="recipe-grain"></output
-                ></label>
-                <input
-                  type="range"
-                  id="recipe-grain"
-                  name="grain"
-                  min="0"
-                  max="100"
-                  step="1"
-                  value="0"
-                />
-              </div>
-
-              <div class="field">
-                <label for="recipe-vignette"
-                  >Vinyeta <output class="js-out" for="recipe-vignette"></output
-                ></label>
-                <input
-                  type="range"
-                  id="recipe-vignette"
-                  name="vignette"
-                  min="0"
-                  max="100"
-                  step="1"
-                  value="0"
-                />
-              </div>
-            </form>
-          </div>
-
-          <svg class="visually-hidden" aria-hidden="true" focusable="false">
-            <filter id="workshop-filter" color-interpolation-filters="sRGB">
-              <feColorMatrix
-                class="js-workshop-color-matrix"
-                type="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-              ></feColorMatrix>
-            </filter>
-          </svg>
-        </div>
-      </section>
-
-      <section class="station" id="tancament" aria-labelledby="s5-title">
-        <div class="wrap">
-          <header class="reagent-label station-label" data-process="both">
-            <p class="label-number">Nº 5</p>
-            <h2 id="s5-title">Tancament</h2>
-            <p class="label-formula">Torna al laboratori</p>
-          </header>
-
-          <div class="closing">
-            <div class="closing-text">
-              <p>
-                El maig de 2009, la mateixa fotografia i els mateixos quatre
-                minuts de sol van donar còpies diferents segons el paper, l'hora
-                i la química. Avui, vint números donen sempre el mateix
-                resultat.
-              </p>
-              <p>
-                El filtre ha guanyat el que el laboratori no tenia: es pot
-                desfer, copiar i compartir. I del laboratori n'ha heretat els
-                colors, els noms i la nostàlgia, però no el paper, ni el sol, ni
-                l'atzar.
-              </p>
+                <svg class="visually-hidden" aria-hidden="true" focusable="false">
+                    <filter id="workshop-filter" color-interpolation-filters="sRGB">
+                        <feColorMatrix class="js-workshop-color-matrix" type="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+                    </filter>
+                </svg>
             </div>
+        </section>
 
-            <figure class="closing-quote">
-              <blockquote lang="es">
-                <p>
-                  "El software se ha convertido en nuestra interfaz con el
-                  mundo, con los demás, con nuestra memoria y nuestra
-                  imaginación"
-                </p>
-              </blockquote>
-              <figcaption>
-                Lev Manovich, <cite>El software toma el mando</cite> (2013),
-                introducció
-              </figcaption>
-            </figure>
+        <section class="station" id="tancament" aria-labelledby="s5-title">
+            <div class="wrap">
+                <header class="reagent-label station-label" data-process="both">
+                    <p class="label-number">Nº 5</p>
+                    <h2 id="s5-title">Tancament</h2>
+                    <p class="label-formula">Torna al laboratori</p>
+                </header>
 
-            <a class="button closing-action" href="#cianotipia"
-              >Torna al laboratori</a
-            >
-          </div>
-        </div>
-      </section>
+                <div class="closing">
+                    <div class="closing-text">
+                        <p>
+                            El maig de 2009, la mateixa fotografia i els mateixos quatre
+                            minuts de sol van donar còpies diferents segons el paper, l'hora
+                            i la química. Avui, vint números donen sempre el mateix
+                            resultat.
+                        </p>
+                        <p>
+                            El filtre ha guanyat el que el laboratori no tenia: es pot
+                            desfer, copiar i compartir. I del laboratori n'ha heretat els
+                            colors, els noms i la nostàlgia, però no el paper, ni el sol, ni
+                            l'atzar.
+                        </p>
+                    </div>
+
+                    <figure class="closing-quote">
+                        <blockquote lang="es">
+                            <p>
+                                "El software se ha convertido en nuestra interfaz con el
+                                mundo, con los demás, con nuestra memoria y nuestra
+                                imaginación"
+                            </p>
+                        </blockquote>
+                        <figcaption>
+                            Lev Manovich, <cite>El software toma el mando</cite> (2013),
+                            introducció
+                        </figcaption>
+                    </figure>
+
+                    <a class="button closing-action" href="#cianotipia">Torna al laboratori</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <h2 class="footer-title">Sobre aquest projecte</h2>
-        <dl class="footer-facts">
-          <div>
-            <dt>Autora</dt>
-            <dd>Carolina López Casanova</dd>
-          </div>
-          <div>
-            <dt>Context</dt>
-            <dd>Cultura Digital (UOC) 2026</dd>
-          </div>
-          <div>
-            <dt>Imatges</dt>
-            <dd>Fotografia, cianotípia i Van Dyke pròpies, maig de 2009</dd>
-          </div>
-          <div>
-            <dt>Fet amb</dt>
-            <dd>
-              HTML, CSS i JavaScript, sense dependències. Filtres SVG
-              <code>feColorMatrix</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Codi</dt>
-            <dd>
-              <a href="https://github.com/clopezca/receptes-de-llum"
-                >github.com/clopezca/receptes-de-llum</a
-              >
-            </dd>
-          </div>
-        </dl>
-      </div>
+        <div class="wrap footer-grid">
+            <h2 class="footer-title">Sobre aquest projecte</h2>
+            <dl class="footer-facts">
+                <div>
+                    <dt>Autora</dt>
+                    <dd>Carolina López Casanova</dd>
+                </div>
+                <div>
+                    <dt>Context</dt>
+                    <dd>Cultura Digital (UOC) 2026</dd>
+                </div>
+                <div>
+                    <dt>Imatges</dt>
+                    <dd>Fotografia, cianotípia i Van Dyke pròpies, maig de 2009</dd>
+                </div>
+                <div>
+                    <dt>Fet amb</dt>
+                    <dd>
+                        HTML, CSS i JavaScript, sense dependències. Filtres SVG
+                        <code>feColorMatrix</code>
+                    </dd>
+                </div>
+                <div>
+                    <dt>Codi</dt>
+                    <dd>
+                        <a href="https://github.com/clopezca/receptes-de-llum">github.com/clopezca/receptes-de-llum</a>
+                    </dd>
+                </div>
+            </dl>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
